@@ -1,0 +1,13 @@
+{
+    "welcomeBack": "Welcome Back!" , 
+    "logInToYourAccount":"Log in to your account" , 
+    "phone":"Phone" , 
+    "password":"Password" , 
+    "login":"Login"  , 
+    "forgetPassword":"Forget Password", 
+    "signUp":"Sign up" , 
+    "alreadyHaveAccountMsg":"Already have an account?" , 
+    "dontHaveAccountMsg":"Don't have an account?"
+
+
+}

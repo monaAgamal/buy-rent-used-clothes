@@ -1,0 +1,11 @@
+{
+    "welcomeBack": "مرحبا بعودتك" , 
+    "logInToYourAccount":"سجل الدخول لحسابك" , 
+    "phone":"رقم الهاتف" , 
+    "password":"كلمة المرور" , 
+    "login":"سجل دخول"  , 
+    "forgetPassword":"نسيت كلمة المرور؟", 
+    "signUp":"إنشاء حساب جديد" , 
+    "alreadyHaveAccountMsg":"هل لديك حساب بالفعل؟" , 
+    "don'tHaveAccountMsg":"ليس لديك حساب؟"
+}
