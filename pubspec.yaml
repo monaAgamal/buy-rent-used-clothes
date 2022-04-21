@@ -9,18 +9,22 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.2
+  dartz: ^0.10.1
   equatable: ^2.0.3
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.0.1
   flutter_localizations:
     sdk: flutter
-  flutter_bloc: ^8.0.1
   flutter_spinkit: ^5.1.0
-  freezed: ^1.1.1
-  generic_validator: ^1.0.0
+  freezed: ^2.0.0
+  get_it: ^7.2.0
+  injectable: ^1.5.3
+  injectable_generator: ^1.5.3
   intl: ^0.17.0
 
 dev_dependencies:
+  build_runner: ^2.1.10
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
@@ -55,4 +59,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  

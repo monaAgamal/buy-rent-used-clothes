@@ -3,8 +3,10 @@ import 'package:buy_rent_used_clothes/features/login/presentation/pages/login_pa
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:buy_rent_used_clothes/di/injection_container.dart' as di;
 
-void main() {
+void main() async {
+  await di.configure();
   runApp(const MyApp());
 }
 

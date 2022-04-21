@@ -1,8 +1,15 @@
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:injectable/injectable.dart';
+import 'login_state.dart';
 
-part 'login_state.dart';
-
+@injectable
 class LoginCubit extends Cubit<LoginState> {
-  LoginCubit() : super(LoginInitial());
+  LoginCubit() : super(const LoginState.initial());
+
+  void enableLoginButton({required String phone, required String password}) {
+    emit(LoginState.enableLoginButton(
+        isEnabled: phone.isNotEmpty && password.isNotEmpty));
+  }
+
+  void login() {}
 }
