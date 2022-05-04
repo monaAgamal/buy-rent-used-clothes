@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'login_state.dart';
+part of 'sign_up_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,74 +15,73 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$LoginState {
+mixin _$SignUpState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(bool isEnabled, DateTime dateTime)
-        enableLoginButton,
+    required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
-    required TResult Function() authenticated,
+    required TResult Function() signedUpSuccessfully,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(enableLoginButton value) enableLoginButton,
+    required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
-    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginStateCopyWith<$Res> {
-  factory $LoginStateCopyWith(
-          LoginState value, $Res Function(LoginState) then) =
-      _$LoginStateCopyWithImpl<$Res>;
+abstract class $SignUpStateCopyWith<$Res> {
+  factory $SignUpStateCopyWith(
+          SignUpState value, $Res Function(SignUpState) then) =
+      _$SignUpStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
-  _$LoginStateCopyWithImpl(this._value, this._then);
+class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
+  _$SignUpStateCopyWithImpl(this._value, this._then);
 
-  final LoginState _value;
+  final SignUpState _value;
   // ignore: unused_field
-  final $Res Function(LoginState) _then;
+  final $Res Function(SignUpState) _then;
 }
 
 /// @nodoc
@@ -92,7 +91,7 @@ abstract class $InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+class _$InitialCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
     implements $InitialCopyWith<$Res> {
   _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
       : super(_value, (v) => _then(v as Initial));
@@ -108,7 +107,7 @@ class _$Initial implements Initial {
 
   @override
   String toString() {
-    return 'LoginState.initial()';
+    return 'SignUpState.initial()';
   }
 
   @override
@@ -124,10 +123,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(bool isEnabled, DateTime dateTime)
-        enableLoginButton,
+    required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
-    required TResult Function() authenticated,
+    required TResult Function() signedUpSuccessfully,
   }) {
     return initial();
   }
@@ -136,9 +134,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
   }) {
     return initial?.call();
   }
@@ -147,9 +145,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -162,9 +160,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(enableLoginButton value) enableLoginButton,
+    required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
-    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
   }) {
     return initial(this);
   }
@@ -173,9 +171,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
   }) {
     return initial?.call(this);
   }
@@ -184,9 +182,9 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -196,116 +194,105 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements LoginState {
+abstract class Initial implements SignUpState {
   const factory Initial() = _$Initial;
 }
 
 /// @nodoc
-abstract class $enableLoginButtonCopyWith<$Res> {
-  factory $enableLoginButtonCopyWith(
-          enableLoginButton value, $Res Function(enableLoginButton) then) =
-      _$enableLoginButtonCopyWithImpl<$Res>;
-  $Res call({bool isEnabled, DateTime dateTime});
+abstract class $EnableSignUpBtnCopyWith<$Res> {
+  factory $EnableSignUpBtnCopyWith(
+          EnableSignUpBtn value, $Res Function(EnableSignUpBtn) then) =
+      _$EnableSignUpBtnCopyWithImpl<$Res>;
+  $Res call({bool isEnabled});
 }
 
 /// @nodoc
-class _$enableLoginButtonCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res>
-    implements $enableLoginButtonCopyWith<$Res> {
-  _$enableLoginButtonCopyWithImpl(
-      enableLoginButton _value, $Res Function(enableLoginButton) _then)
-      : super(_value, (v) => _then(v as enableLoginButton));
+class _$EnableSignUpBtnCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res>
+    implements $EnableSignUpBtnCopyWith<$Res> {
+  _$EnableSignUpBtnCopyWithImpl(
+      EnableSignUpBtn _value, $Res Function(EnableSignUpBtn) _then)
+      : super(_value, (v) => _then(v as EnableSignUpBtn));
 
   @override
-  enableLoginButton get _value => super._value as enableLoginButton;
+  EnableSignUpBtn get _value => super._value as EnableSignUpBtn;
 
   @override
   $Res call({
     Object? isEnabled = freezed,
-    Object? dateTime = freezed,
   }) {
-    return _then(enableLoginButton(
+    return _then(EnableSignUpBtn(
       isEnabled: isEnabled == freezed
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
-      dateTime: dateTime == freezed
-          ? _value.dateTime
-          : dateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
     ));
   }
 }
 
 /// @nodoc
 
-class _$enableLoginButton implements enableLoginButton {
-  const _$enableLoginButton({required this.isEnabled, required this.dateTime});
+class _$EnableSignUpBtn implements EnableSignUpBtn {
+  const _$EnableSignUpBtn({required this.isEnabled});
 
   @override
   final bool isEnabled;
-  @override
-  final DateTime dateTime;
 
   @override
   String toString() {
-    return 'LoginState.enableLoginButton(isEnabled: $isEnabled, dateTime: $dateTime)';
+    return 'SignUpState.enableSignUpBtn(isEnabled: $isEnabled)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is enableLoginButton &&
-            const DeepCollectionEquality().equals(other.isEnabled, isEnabled) &&
-            const DeepCollectionEquality().equals(other.dateTime, dateTime));
+            other is EnableSignUpBtn &&
+            const DeepCollectionEquality().equals(other.isEnabled, isEnabled));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(isEnabled),
-      const DeepCollectionEquality().hash(dateTime));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(isEnabled));
 
   @JsonKey(ignore: true)
   @override
-  $enableLoginButtonCopyWith<enableLoginButton> get copyWith =>
-      _$enableLoginButtonCopyWithImpl<enableLoginButton>(this, _$identity);
+  $EnableSignUpBtnCopyWith<EnableSignUpBtn> get copyWith =>
+      _$EnableSignUpBtnCopyWithImpl<EnableSignUpBtn>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(bool isEnabled, DateTime dateTime)
-        enableLoginButton,
+    required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
-    required TResult Function() authenticated,
+    required TResult Function() signedUpSuccessfully,
   }) {
-    return enableLoginButton(isEnabled, dateTime);
+    return enableSignUpBtn(isEnabled);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
   }) {
-    return enableLoginButton?.call(isEnabled, dateTime);
+    return enableSignUpBtn?.call(isEnabled);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
     required TResult orElse(),
   }) {
-    if (enableLoginButton != null) {
-      return enableLoginButton(isEnabled, dateTime);
+    if (enableSignUpBtn != null) {
+      return enableSignUpBtn(isEnabled);
     }
     return orElse();
   }
@@ -314,49 +301,47 @@ class _$enableLoginButton implements enableLoginButton {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(enableLoginButton value) enableLoginButton,
+    required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
-    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
   }) {
-    return enableLoginButton(this);
+    return enableSignUpBtn(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
   }) {
-    return enableLoginButton?.call(this);
+    return enableSignUpBtn?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
     required TResult orElse(),
   }) {
-    if (enableLoginButton != null) {
-      return enableLoginButton(this);
+    if (enableSignUpBtn != null) {
+      return enableSignUpBtn(this);
     }
     return orElse();
   }
 }
 
-abstract class enableLoginButton implements LoginState {
-  const factory enableLoginButton(
-      {required final bool isEnabled,
-      required final DateTime dateTime}) = _$enableLoginButton;
+abstract class EnableSignUpBtn implements SignUpState {
+  const factory EnableSignUpBtn({required final bool isEnabled}) =
+      _$EnableSignUpBtn;
 
   bool get isEnabled => throw _privateConstructorUsedError;
-  DateTime get dateTime => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $enableLoginButtonCopyWith<enableLoginButton> get copyWith =>
+  $EnableSignUpBtnCopyWith<EnableSignUpBtn> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -367,7 +352,7 @@ abstract class $LoadingCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+class _$LoadingCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
     implements $LoadingCopyWith<$Res> {
   _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
       : super(_value, (v) => _then(v as Loading));
@@ -383,7 +368,7 @@ class _$Loading implements Loading {
 
   @override
   String toString() {
-    return 'LoginState.loading()';
+    return 'SignUpState.loading()';
   }
 
   @override
@@ -399,10 +384,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(bool isEnabled, DateTime dateTime)
-        enableLoginButton,
+    required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
-    required TResult Function() authenticated,
+    required TResult Function() signedUpSuccessfully,
   }) {
     return loading();
   }
@@ -411,9 +395,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
   }) {
     return loading?.call();
   }
@@ -422,9 +406,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -437,9 +421,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(enableLoginButton value) enableLoginButton,
+    required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
-    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
   }) {
     return loading(this);
   }
@@ -448,9 +432,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
   }) {
     return loading?.call(this);
   }
@@ -459,9 +443,9 @@ class _$Loading implements Loading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -471,42 +455,43 @@ class _$Loading implements Loading {
   }
 }
 
-abstract class Loading implements LoginState {
+abstract class Loading implements SignUpState {
   const factory Loading() = _$Loading;
 }
 
 /// @nodoc
-abstract class $AuthenticatedCopyWith<$Res> {
-  factory $AuthenticatedCopyWith(
-          Authenticated value, $Res Function(Authenticated) then) =
-      _$AuthenticatedCopyWithImpl<$Res>;
+abstract class $SignedUpSuccessfullyCopyWith<$Res> {
+  factory $SignedUpSuccessfullyCopyWith(SignedUpSuccessfully value,
+          $Res Function(SignedUpSuccessfully) then) =
+      _$SignedUpSuccessfullyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AuthenticatedCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements $AuthenticatedCopyWith<$Res> {
-  _$AuthenticatedCopyWithImpl(
-      Authenticated _value, $Res Function(Authenticated) _then)
-      : super(_value, (v) => _then(v as Authenticated));
+class _$SignedUpSuccessfullyCopyWithImpl<$Res>
+    extends _$SignUpStateCopyWithImpl<$Res>
+    implements $SignedUpSuccessfullyCopyWith<$Res> {
+  _$SignedUpSuccessfullyCopyWithImpl(
+      SignedUpSuccessfully _value, $Res Function(SignedUpSuccessfully) _then)
+      : super(_value, (v) => _then(v as SignedUpSuccessfully));
 
   @override
-  Authenticated get _value => super._value as Authenticated;
+  SignedUpSuccessfully get _value => super._value as SignedUpSuccessfully;
 }
 
 /// @nodoc
 
-class _$Authenticated implements Authenticated {
-  const _$Authenticated();
+class _$SignedUpSuccessfully implements SignedUpSuccessfully {
+  const _$SignedUpSuccessfully();
 
   @override
   String toString() {
-    return 'LoginState.authenticated()';
+    return 'SignUpState.signedUpSuccessfully()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Authenticated);
+        (other.runtimeType == runtimeType && other is SignedUpSuccessfully);
   }
 
   @override
@@ -516,36 +501,35 @@ class _$Authenticated implements Authenticated {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(bool isEnabled, DateTime dateTime)
-        enableLoginButton,
+    required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
-    required TResult Function() authenticated,
+    required TResult Function() signedUpSuccessfully,
   }) {
-    return authenticated();
+    return signedUpSuccessfully();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
   }) {
-    return authenticated?.call();
+    return signedUpSuccessfully?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
-    TResult Function()? authenticated,
+    TResult Function()? signedUpSuccessfully,
     required TResult orElse(),
   }) {
-    if (authenticated != null) {
-      return authenticated();
+    if (signedUpSuccessfully != null) {
+      return signedUpSuccessfully();
     }
     return orElse();
   }
@@ -554,40 +538,40 @@ class _$Authenticated implements Authenticated {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(enableLoginButton value) enableLoginButton,
+    required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
-    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
   }) {
-    return authenticated(this);
+    return signedUpSuccessfully(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
   }) {
-    return authenticated?.call(this);
+    return signedUpSuccessfully?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
-    TResult Function(Authenticated value)? authenticated,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
     required TResult orElse(),
   }) {
-    if (authenticated != null) {
-      return authenticated(this);
+    if (signedUpSuccessfully != null) {
+      return signedUpSuccessfully(this);
     }
     return orElse();
   }
 }
 
-abstract class Authenticated implements LoginState {
-  const factory Authenticated() = _$Authenticated;
+abstract class SignedUpSuccessfully implements SignUpState {
+  const factory SignedUpSuccessfully() = _$SignedUpSuccessfully;
 }

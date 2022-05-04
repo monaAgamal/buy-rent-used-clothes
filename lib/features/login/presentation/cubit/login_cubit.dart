@@ -8,7 +8,10 @@ class LoginCubit extends Cubit<LoginState> {
 
   void enableLoginButton({required String phone, required String password}) {
     emit(LoginState.enableLoginButton(
-        isEnabled: phone.isNotEmpty && password.isNotEmpty));
+        isEnabled: phone.isNotEmpty && password.isNotEmpty,
+        dateTime: DateTime.now(),
+      ),
+    );
   }
 
   void login() {}

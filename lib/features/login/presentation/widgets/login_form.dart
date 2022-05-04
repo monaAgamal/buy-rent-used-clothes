@@ -1,9 +1,12 @@
+import 'dart:developer';
 import 'package:buy_rent_used_clothes/core/widgets/generic_text_field.dart';
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
 import 'package:buy_rent_used_clothes/features/login/presentation/cubit/login_cubit.dart';
 import 'package:buy_rent_used_clothes/features/login/presentation/cubit/login_state.dart';
 import 'package:buy_rent_used_clothes/routes/routes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -17,9 +20,12 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   final phoneController = TextEditingController();
   final passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
+    final LoginCubit loginBloc = context.read<LoginCubit>();
     return BlocListener<LoginCubit, LoginState>(
+      bloc: loginBloc,
       listener: (context, state) {
         state.maybeWhen(
           orElse: () {},
@@ -50,34 +56,88 @@ class _LoginFormState extends State<LoginForm> {
             controller: phoneController,
             hint: AppLocalizations.of(context)!.phone,
             keyboardType: TextInputType.phone,
+            onChanged: (phone) {
+              loginBloc.enableLoginButton(
+                phone: phoneController.text,
+                password: passwordController.text,
+              );
+            },
           ),
           const SizedBox(height: 16),
           GenericTextField(
             controller: passwordController,
             hint: AppLocalizations.of(context)!.password,
             keyboardType: TextInputType.text,
+            onChanged: (password) {
+              loginBloc.enableLoginButton(
+                  phone: phoneController.text,
+                  password: passwordController.text);
+            },
+          ),
+          const SizedBox(height: 8),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamed(phoneInputeRoute);
+            },
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                AppLocalizations.of(context)!.forgetPassword + " ?",
+                style: const TextStyle(fontSize: 16),
+              ),
+            ),
           ),
           const SizedBox(height: 64),
           BlocBuilder<LoginCubit, LoginState>(
+            bloc: loginBloc,
             builder: (context, state) {
               return state.maybeWhen(
                 loading: () => MainButton(
                   label: AppLocalizations.of(context)!.login,
                   isOutlined: true,
+                  onTap: () {},
                   isLoading: true,
                 ),
-                enableLoginButton: (isEnabled) => MainButton(
-                  label: AppLocalizations.of(context)!.login,
-                  isOutlined: isEnabled,
-                ),
+                enableLoginButton: (isEnabled, _) {
+                  log(isEnabled.toString());
+                  return MainButton(
+                    onTap: null,
+                    label: AppLocalizations.of(context)!.login,
+                    isOutlined: !isEnabled,
+                  );
+                },
                 orElse: () => MainButton(
+                  onTap: () {
+                    Navigator.of(context).pushReplacementNamed(homeRoute);
+                  },
                   label: AppLocalizations.of(context)!.login,
                   isOutlined: passwordController.text.isEmpty &&
                       phoneController.text.isEmpty,
                 ),
               );
             },
-          )
+          ),
+          const SizedBox(height: 18),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(signUpRoute);
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  AppLocalizations.of(context)!.dontHaveAccountMsg,
+                  style: const TextStyle(fontSize: 18),
+                ),
+                const SizedBox(width: 4),
+                Text(
+                  AppLocalizations.of(context)!.signUp,
+                  style: const TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

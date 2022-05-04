@@ -7,5 +7,15 @@
     "forgetPassword":"نسيت كلمة المرور؟", 
     "signUp":"إنشاء حساب جديد" , 
     "alreadyHaveAccountMsg":"هل لديك حساب بالفعل؟" , 
-    "don'tHaveAccountMsg":"ليس لديك حساب؟"
+    "don'tHaveAccountMsg":"ليس لديك حساب؟" , 
+    "name":"الإسم" ,
+    "confirmPassword" :"تأكيد كلمة المرور" , 
+    "resetPassword" :"إعادة تعيين كلمة المرور" ,
+    "resetPasswordMsg":"يجب إدخال رقم الهاتف المتعلق بحسابك لإعادة تعيين كلمة المرور" , 
+    "sendOtp":"إرسال الكود"  , 
+    "verificationCode":"كود التحقق"  ,
+    "newPassword" : "كلمة المرور الجديدة" ,
+    "confirmNewPassword": "تأكيد كلمة المرور" ,
+    "checkCode" : "تحقق من كود التفعيل" ,
+    "check" : "تحقق"
 }

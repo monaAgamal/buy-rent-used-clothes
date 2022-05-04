@@ -17,7 +17,13 @@ final appTheme = ThemeData(
   ),
   errorColor: errorColor,
   scaffoldBackgroundColor: primaryColor,
-   
+  textTheme: const TextTheme(
+    bodyText2: TextStyle(fontSize: 18),
+    bodyText1: TextStyle(fontSize: 18),
+    subtitle2: TextStyle(fontSize: 18), 
+    
+
+  ),
   inputDecorationTheme: InputDecorationTheme(
     contentPadding: const EdgeInsets.all(16),
     enabledBorder: UnderlineInputBorder(

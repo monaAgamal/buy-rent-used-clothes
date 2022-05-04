@@ -7,5 +7,15 @@
     "forgetPassword":"Forget Password", 
     "signUp":"Sign up" , 
     "alreadyHaveAccountMsg":"Already have an account?" , 
-    "dontHaveAccountMsg":"Don't have an account?"
+    "dontHaveAccountMsg":"Don't have an account?"  , 
+    "name" : "Name" ,
+    "confirmPassword" :"Confirm password"  , 
+    "resetPassword" :"ٌReset password" ,
+    "resetPasswordMsg":"To oreset yor password you've to enter your phone number, to sed verification code" , 
+    "sendOtp":"Send code"  , 
+    "verificationCode":"Verification code" ,
+    "newPassword" : "New password" ,
+    "confirmNewPassword" : "Confirm password" ,
+    "checkCode" : "Check code" ,
+    "check" : "Check"
 }
