@@ -1,5 +1,6 @@
 import 'package:buy_rent_used_clothes/core/widgets/generic_text_field.dart';
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
+import 'package:buy_rent_used_clothes/features/sign_up/domain/usecases/sign_up_usecase.dart';
 import 'package:buy_rent_used_clothes/features/sign_up/presentation/cubit/sign_up_cubit.dart';
 import 'package:buy_rent_used_clothes/features/sign_up/presentation/cubit/sign_up_state.dart';
 import 'package:buy_rent_used_clothes/routes/routes.dart';
@@ -17,13 +18,16 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   final nameController = TextEditingController();
-  final phoneController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final confirmPasswordController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     final signUpBloc = BlocProvider.of<SignUpCubit>(context);
     return Form(
+      key: _formKey,
       child: Column(
         children: [
           GenericTextField(
@@ -32,7 +36,7 @@ class _SignUpFormState extends State<SignUpForm> {
             keyboardType: TextInputType.text,
             onChanged: (name) {
               signUpBloc.enableLoginButton(
-                phone: phoneController.text,
+                phone: emailController.text,
                 password: passwordController.text,
                 confirmPassword: confirmPasswordController.text,
                 name: nameController.text,
@@ -41,12 +45,12 @@ class _SignUpFormState extends State<SignUpForm> {
           ),
           const SizedBox(height: 16),
           GenericTextField(
-            controller: phoneController,
+            controller: emailController,
             hint: AppLocalizations.of(context)!.phone,
-            keyboardType: TextInputType.phone,
+            keyboardType: TextInputType.emailAddress,
             onChanged: (name) {
               signUpBloc.enableLoginButton(
-                phone: phoneController.text,
+                phone: emailController.text,
                 password: passwordController.text,
                 confirmPassword: confirmPasswordController.text,
                 name: nameController.text,
@@ -61,7 +65,7 @@ class _SignUpFormState extends State<SignUpForm> {
             isObsecure: true,
             onChanged: (name) {
               signUpBloc.enableLoginButton(
-                phone: phoneController.text,
+                phone: emailController.text,
                 password: passwordController.text,
                 confirmPassword: confirmPasswordController.text,
                 name: nameController.text,
@@ -76,7 +80,7 @@ class _SignUpFormState extends State<SignUpForm> {
               isObsecure: true,
               onChanged: (name) {
                 signUpBloc.enableLoginButton(
-                  phone: phoneController.text,
+                  phone: emailController.text,
                   password: passwordController.text,
                   confirmPassword: confirmPasswordController.text,
                   name: nameController.text,
@@ -89,7 +93,16 @@ class _SignUpFormState extends State<SignUpForm> {
               return state.maybeWhen(
                 enableSignUpBtn: (isEnabled) => MainButton(
                   onTap: () {
-                    Navigator.of(context).pushReplacementNamed(homeRoute);
+                    final bool? isValidForm = _formKey.currentState?.validate();
+                    if (isValidForm != null && isValidForm) {
+                      signUpBloc.signUp(
+                          params: SignUpParams(
+                        name: nameController.text,
+                        email: emailController.text,
+                        password: passwordController.text,
+                      ));
+                    }
+                    // Navigator.of(context).pushReplacementNamed(homeRoute);
                   },
                   label: AppLocalizations.of(context)!.signUp,
                   isOutlined: !isEnabled,

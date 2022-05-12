@@ -24,6 +24,8 @@ dependencies:
   injectable_generator: ^1.5.3
   intl: ^0.17.0
   pin_code_fields: ^7.4.0
+  firebase_auth: ^3.3.17
+  firebase_core: ^1.16.0
 
 dev_dependencies:
   build_runner: ^2.1.10
