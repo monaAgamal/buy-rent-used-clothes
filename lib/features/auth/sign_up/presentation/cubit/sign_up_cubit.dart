@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:buy_rent_used_clothes/core/utils/error_state_from_failure.dart';
 import 'package:buy_rent_used_clothes/features/auth/sign_up/domain/usecases/sign_up_usecase.dart';
 import 'package:buy_rent_used_clothes/features/auth/sign_up/presentation/cubit/sign_up_state.dart';
 import 'package:injectable/injectable.dart';
@@ -28,6 +29,13 @@ class SignUpCubit extends Cubit<SignUpState> {
   Future signUp({required SignUpParams params}) async {
     emit(const SignUpState.loading());
     final result = await signUpUsecase(params: params);
-    emit(const SignUpState.signedUpSuccessfully());
+    // emit(const SignUpState.signedUpSuccessfully());
+    emit(
+      result.fold(
+        (l) => errorStateFromFailure(
+            l, (_, msg) => SignUpState.error(message: msg)),
+        (r) => const SignUpState.signedUpSuccessfully(),
+      ),
+    );
   }
 }

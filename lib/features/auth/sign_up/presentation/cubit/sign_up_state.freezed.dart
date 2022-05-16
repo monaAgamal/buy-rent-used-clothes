@@ -22,6 +22,7 @@ mixin _$SignUpState {
     required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
     required TResult Function() signedUpSuccessfully,
+    required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$SignUpState {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$SignUpState {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$SignUpState {
     required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
     required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
+    required TResult Function(Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$SignUpState {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$SignUpState {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -126,6 +132,7 @@ class _$Initial implements Initial {
     required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
     required TResult Function() signedUpSuccessfully,
+    required TResult Function(String message) error,
   }) {
     return initial();
   }
@@ -137,6 +144,7 @@ class _$Initial implements Initial {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
   }) {
     return initial?.call();
   }
@@ -148,6 +156,7 @@ class _$Initial implements Initial {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -163,6 +172,7 @@ class _$Initial implements Initial {
     required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
     required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
+    required TResult Function(Error value) error,
   }) {
     return initial(this);
   }
@@ -174,6 +184,7 @@ class _$Initial implements Initial {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -185,6 +196,7 @@ class _$Initial implements Initial {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -267,6 +279,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
     required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
     required TResult Function() signedUpSuccessfully,
+    required TResult Function(String message) error,
   }) {
     return enableSignUpBtn(isEnabled);
   }
@@ -278,6 +291,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
   }) {
     return enableSignUpBtn?.call(isEnabled);
   }
@@ -289,6 +303,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (enableSignUpBtn != null) {
@@ -304,6 +319,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
     required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
     required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
+    required TResult Function(Error value) error,
   }) {
     return enableSignUpBtn(this);
   }
@@ -315,6 +331,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
   }) {
     return enableSignUpBtn?.call(this);
   }
@@ -326,6 +343,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (enableSignUpBtn != null) {
@@ -387,6 +405,7 @@ class _$Loading implements Loading {
     required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
     required TResult Function() signedUpSuccessfully,
+    required TResult Function(String message) error,
   }) {
     return loading();
   }
@@ -398,6 +417,7 @@ class _$Loading implements Loading {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
   }) {
     return loading?.call();
   }
@@ -409,6 +429,7 @@ class _$Loading implements Loading {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -424,6 +445,7 @@ class _$Loading implements Loading {
     required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
     required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
+    required TResult Function(Error value) error,
   }) {
     return loading(this);
   }
@@ -435,6 +457,7 @@ class _$Loading implements Loading {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -446,6 +469,7 @@ class _$Loading implements Loading {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -504,6 +528,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
     required TResult Function(bool isEnabled) enableSignUpBtn,
     required TResult Function() loading,
     required TResult Function() signedUpSuccessfully,
+    required TResult Function(String message) error,
   }) {
     return signedUpSuccessfully();
   }
@@ -515,6 +540,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
   }) {
     return signedUpSuccessfully?.call();
   }
@@ -526,6 +552,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
     TResult Function(bool isEnabled)? enableSignUpBtn,
     TResult Function()? loading,
     TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (signedUpSuccessfully != null) {
@@ -541,6 +568,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
     required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
     required TResult Function(Loading value) loading,
     required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
+    required TResult Function(Error value) error,
   }) {
     return signedUpSuccessfully(this);
   }
@@ -552,6 +580,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
   }) {
     return signedUpSuccessfully?.call(this);
   }
@@ -563,6 +592,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
     TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
     TResult Function(Loading value)? loading,
     TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (signedUpSuccessfully != null) {
@@ -574,4 +604,152 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
 
 abstract class SignedUpSuccessfully implements SignUpState {
   const factory SignedUpSuccessfully() = _$SignedUpSuccessfully;
+}
+
+/// @nodoc
+abstract class $ErrorCopyWith<$Res> {
+  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
+      _$ErrorCopyWithImpl<$Res>;
+  $Res call({String message});
+}
+
+/// @nodoc
+class _$ErrorCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
+    implements $ErrorCopyWith<$Res> {
+  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
+      : super(_value, (v) => _then(v as Error));
+
+  @override
+  Error get _value => super._value as Error;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(Error(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Error implements Error {
+  const _$Error({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'SignUpState.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Error &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  $ErrorCopyWith<Error> get copyWith =>
+      _$ErrorCopyWithImpl<Error>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool isEnabled) enableSignUpBtn,
+    required TResult Function() loading,
+    required TResult Function() signedUpSuccessfully,
+    required TResult Function(String message) error,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
+    TResult Function()? loading,
+    TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool isEnabled)? enableSignUpBtn,
+    TResult Function()? loading,
+    TResult Function()? signedUpSuccessfully,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(EnableSignUpBtn value) enableSignUpBtn,
+    required TResult Function(Loading value) loading,
+    required TResult Function(SignedUpSuccessfully value) signedUpSuccessfully,
+    required TResult Function(Error value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
+    TResult Function(Loading value)? loading,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(EnableSignUpBtn value)? enableSignUpBtn,
+    TResult Function(Loading value)? loading,
+    TResult Function(SignedUpSuccessfully value)? signedUpSuccessfully,
+    TResult Function(Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Error implements SignUpState {
+  const factory Error({required final String message}) = _$Error;
+
+  String get message => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
 }
