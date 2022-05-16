@@ -1,4 +1,3 @@
-import 'package:buy_rent_used_clothes/di/injection_container.dart';
 import 'package:buy_rent_used_clothes/features/auth/core/presentation/cubit/auth_status_cubit.dart';
 import 'package:buy_rent_used_clothes/features/auth/core/presentation/cubit/auth_status_state.dart';
 import 'package:buy_rent_used_clothes/features/auth/login/presentation/pages/login_page.dart';

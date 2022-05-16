@@ -6,4 +6,5 @@ abstract class AuthLocalDataSource {
   Future<void> persistAuth({required UserModel userModel});
 
   Future<void> revokeAuth();
+  
 }

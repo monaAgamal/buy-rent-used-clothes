@@ -2,7 +2,6 @@ import 'package:buy_rent_used_clothes/di/injection_container.dart';
 import 'package:buy_rent_used_clothes/features/auth/login/presentation/cubit/login_cubit.dart';
 import 'package:buy_rent_used_clothes/features/auth/login/presentation/widgets/login_form.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {

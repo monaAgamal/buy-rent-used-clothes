@@ -22,6 +22,7 @@ mixin _$LoginState {
     required TResult Function(bool isEnabled, DateTime dateTime)
         enableLoginButton,
     required TResult Function() loading,
+    required TResult Function(String message) error,
     required TResult Function() authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -30,6 +31,7 @@ mixin _$LoginState {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -38,6 +40,7 @@ mixin _$LoginState {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) =>
@@ -47,6 +50,7 @@ mixin _$LoginState {
     required TResult Function(Initial value) initial,
     required TResult Function(enableLoginButton value) enableLoginButton,
     required TResult Function(Loading value) loading,
+    required TResult Function(Error value) error,
     required TResult Function(Authenticated value) authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -55,6 +59,7 @@ mixin _$LoginState {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
   }) =>
       throw _privateConstructorUsedError;
@@ -63,6 +68,7 @@ mixin _$LoginState {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
     required TResult orElse(),
   }) =>
@@ -127,6 +133,7 @@ class _$Initial implements Initial {
     required TResult Function(bool isEnabled, DateTime dateTime)
         enableLoginButton,
     required TResult Function() loading,
+    required TResult Function(String message) error,
     required TResult Function() authenticated,
   }) {
     return initial();
@@ -138,6 +145,7 @@ class _$Initial implements Initial {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
   }) {
     return initial?.call();
@@ -149,6 +157,7 @@ class _$Initial implements Initial {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -164,6 +173,7 @@ class _$Initial implements Initial {
     required TResult Function(Initial value) initial,
     required TResult Function(enableLoginButton value) enableLoginButton,
     required TResult Function(Loading value) loading,
+    required TResult Function(Error value) error,
     required TResult Function(Authenticated value) authenticated,
   }) {
     return initial(this);
@@ -175,6 +185,7 @@ class _$Initial implements Initial {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
   }) {
     return initial?.call(this);
@@ -186,6 +197,7 @@ class _$Initial implements Initial {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
     required TResult orElse(),
   }) {
@@ -279,6 +291,7 @@ class _$enableLoginButton implements enableLoginButton {
     required TResult Function(bool isEnabled, DateTime dateTime)
         enableLoginButton,
     required TResult Function() loading,
+    required TResult Function(String message) error,
     required TResult Function() authenticated,
   }) {
     return enableLoginButton(isEnabled, dateTime);
@@ -290,6 +303,7 @@ class _$enableLoginButton implements enableLoginButton {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
   }) {
     return enableLoginButton?.call(isEnabled, dateTime);
@@ -301,6 +315,7 @@ class _$enableLoginButton implements enableLoginButton {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -316,6 +331,7 @@ class _$enableLoginButton implements enableLoginButton {
     required TResult Function(Initial value) initial,
     required TResult Function(enableLoginButton value) enableLoginButton,
     required TResult Function(Loading value) loading,
+    required TResult Function(Error value) error,
     required TResult Function(Authenticated value) authenticated,
   }) {
     return enableLoginButton(this);
@@ -327,6 +343,7 @@ class _$enableLoginButton implements enableLoginButton {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
   }) {
     return enableLoginButton?.call(this);
@@ -338,6 +355,7 @@ class _$enableLoginButton implements enableLoginButton {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
     required TResult orElse(),
   }) {
@@ -402,6 +420,7 @@ class _$Loading implements Loading {
     required TResult Function(bool isEnabled, DateTime dateTime)
         enableLoginButton,
     required TResult Function() loading,
+    required TResult Function(String message) error,
     required TResult Function() authenticated,
   }) {
     return loading();
@@ -413,6 +432,7 @@ class _$Loading implements Loading {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
   }) {
     return loading?.call();
@@ -424,6 +444,7 @@ class _$Loading implements Loading {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -439,6 +460,7 @@ class _$Loading implements Loading {
     required TResult Function(Initial value) initial,
     required TResult Function(enableLoginButton value) enableLoginButton,
     required TResult Function(Loading value) loading,
+    required TResult Function(Error value) error,
     required TResult Function(Authenticated value) authenticated,
   }) {
     return loading(this);
@@ -450,6 +472,7 @@ class _$Loading implements Loading {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
   }) {
     return loading?.call(this);
@@ -461,6 +484,7 @@ class _$Loading implements Loading {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
     required TResult orElse(),
   }) {
@@ -473,6 +497,155 @@ class _$Loading implements Loading {
 
 abstract class Loading implements LoginState {
   const factory Loading() = _$Loading;
+}
+
+/// @nodoc
+abstract class $ErrorCopyWith<$Res> {
+  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
+      _$ErrorCopyWithImpl<$Res>;
+  $Res call({String message});
+}
+
+/// @nodoc
+class _$ErrorCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+    implements $ErrorCopyWith<$Res> {
+  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
+      : super(_value, (v) => _then(v as Error));
+
+  @override
+  Error get _value => super._value as Error;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(Error(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Error implements Error {
+  const _$Error({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'LoginState.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Error &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  $ErrorCopyWith<Error> get copyWith =>
+      _$ErrorCopyWithImpl<Error>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(bool isEnabled, DateTime dateTime)
+        enableLoginButton,
+    required TResult Function() loading,
+    required TResult Function(String message) error,
+    required TResult Function() authenticated,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function()? authenticated,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
+    TResult Function()? loading,
+    TResult Function(String message)? error,
+    TResult Function()? authenticated,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(enableLoginButton value) enableLoginButton,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Error value) error,
+    required TResult Function(Authenticated value) authenticated,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
+    TResult Function(Authenticated value)? authenticated,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(enableLoginButton value)? enableLoginButton,
+    TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
+    TResult Function(Authenticated value)? authenticated,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Error implements LoginState {
+  const factory Error({required final String message}) = _$Error;
+
+  String get message => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -519,6 +692,7 @@ class _$Authenticated implements Authenticated {
     required TResult Function(bool isEnabled, DateTime dateTime)
         enableLoginButton,
     required TResult Function() loading,
+    required TResult Function(String message) error,
     required TResult Function() authenticated,
   }) {
     return authenticated();
@@ -530,6 +704,7 @@ class _$Authenticated implements Authenticated {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
   }) {
     return authenticated?.call();
@@ -541,6 +716,7 @@ class _$Authenticated implements Authenticated {
     TResult Function()? initial,
     TResult Function(bool isEnabled, DateTime dateTime)? enableLoginButton,
     TResult Function()? loading,
+    TResult Function(String message)? error,
     TResult Function()? authenticated,
     required TResult orElse(),
   }) {
@@ -556,6 +732,7 @@ class _$Authenticated implements Authenticated {
     required TResult Function(Initial value) initial,
     required TResult Function(enableLoginButton value) enableLoginButton,
     required TResult Function(Loading value) loading,
+    required TResult Function(Error value) error,
     required TResult Function(Authenticated value) authenticated,
   }) {
     return authenticated(this);
@@ -567,6 +744,7 @@ class _$Authenticated implements Authenticated {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
   }) {
     return authenticated?.call(this);
@@ -578,6 +756,7 @@ class _$Authenticated implements Authenticated {
     TResult Function(Initial value)? initial,
     TResult Function(enableLoginButton value)? enableLoginButton,
     TResult Function(Loading value)? loading,
+    TResult Function(Error value)? error,
     TResult Function(Authenticated value)? authenticated,
     required TResult orElse(),
   }) {

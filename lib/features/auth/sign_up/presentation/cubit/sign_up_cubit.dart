@@ -21,7 +21,8 @@ class SignUpCubit extends Cubit<SignUpState> {
         isEnabled: phone.isNotEmpty &&
             password.isNotEmpty &&
             confirmPassword.isNotEmpty &&
-            name.isNotEmpty,
+            name.isNotEmpty &&
+            password == confirmPassword,
       ),
     );
   }

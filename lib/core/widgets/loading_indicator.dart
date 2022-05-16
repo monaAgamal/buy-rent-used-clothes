@@ -6,8 +6,8 @@ class LoadingIndictor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SpinKitDualRing(
-      color: Theme.of(context).primaryColor,
+    return const SpinKitFadingCircle(
+      color: Colors.white,
       size: 24,
     );
   }

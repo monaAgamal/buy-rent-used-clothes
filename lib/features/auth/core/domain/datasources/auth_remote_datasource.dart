@@ -11,6 +11,11 @@ abstract class AuthRemoteDataSource {
     required String phone,
     required String name ,
   });
+
+  Future<void> sendVerificationEmail({
+    required String email,
+  });
+  
   Future<UserModel> verify({
     required String email,
     required String otp,

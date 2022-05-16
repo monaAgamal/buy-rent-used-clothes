@@ -9,5 +9,6 @@ abstract class LoginState with _$LoginState {
       required DateTime dateTime}) =
       enableLoginButton;
   const factory LoginState.loading() = Loading;
+  const factory LoginState.error({required String message}) = Error;
   const factory LoginState.authenticated() = Authenticated;
 }

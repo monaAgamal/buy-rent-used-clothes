@@ -10,8 +10,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:buy_rent_used_clothes/di/injection_container.dart' as di;
-import 'package:firebase_auth/firebase_auth.dart';
-
 
 
 void main() async {

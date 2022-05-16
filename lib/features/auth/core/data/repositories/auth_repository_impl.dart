@@ -5,6 +5,8 @@ import 'package:buy_rent_used_clothes/core/failure/failure.dart';
 import 'package:buy_rent_used_clothes/features/auth/core/domain/datasources/auth_local_datasource.dart';
 import 'package:buy_rent_used_clothes/features/auth/core/domain/datasources/auth_remote_datasource.dart';
 import 'package:buy_rent_used_clothes/features/auth/core/domain/repositories/auth_repository.dart';
+import 'package:buy_rent_used_clothes/features/auth/login/domain/entities/logged_in_user_entity.dart';
+import 'package:buy_rent_used_clothes/features/auth/login/domain/usecases/login_usecase.dart';
 import 'package:buy_rent_used_clothes/features/auth/sign_up/domain/usecases/sign_up_usecase.dart';
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
@@ -41,6 +43,28 @@ class AuthRemoteRepositoryImpl implements AuthRepository {
       );
       await authLocalDataSource.persistAuth(userModel: userModel);
       return Right(userModel != null ? true : false);
+    } on ApplicationException catch (e) {
+      return Left(firebaseExceptionToFailureDecoder(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, LoggedInUserEntity>> login(
+      {required LoginParam params}) async {
+    try {
+      final userModel = await authRemoteDataSource.login(
+          email: params.email, passWord: params.password);
+      await authLocalDataSource.persistAuth(userModel: userModel);
+      if (!userModel.isVerified) {
+        await authRemoteDataSource.sendVerificationEmail(
+            email: userModel.email);
+      }
+      return Right(
+        LoggedInUserEntity(
+          isAuthenticated: userModel != null,
+          isVerified: userModel.isVerified,
+        ),
+      );
     } on ApplicationException catch (e) {
       return Left(firebaseExceptionToFailureDecoder(e));
     }

@@ -1,6 +1,6 @@
 import 'package:buy_rent_used_clothes/features/auth/core/presentation/pages/landing_page.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/input_phone/presentation/pages/input_phone_page.dart';
-import 'package:buy_rent_used_clothes/features/auth/forget_password/phone_activation/presentation/pages/phone_verification_page.dart';
+import 'package:buy_rent_used_clothes/features/auth/forget_password/mail_activation/presentation/pages/phone_verification_page.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/reset_password/presentation/pages/reset_password_page.dart';
 import 'package:buy_rent_used_clothes/features/auth/login/presentation/pages/login_page.dart';
 import 'package:buy_rent_used_clothes/features/auth/sign_up/presentation/pages/sign_up_page.dart';
@@ -28,7 +28,7 @@ Route<dynamic>? onGenerateRoute(RouteSettings? settings) {
         builder: (_) {
           final args = settings?.arguments as OtpVerificationArgs;
           return OtpVerficationPage(
-            phone:  args.phone ,
+            email: args.phone,
           );
         },
       );

@@ -16,7 +16,7 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  final phoneController = TextEditingController();
+  final emailController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
@@ -51,12 +51,12 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const SizedBox(height: 16),
           GenericTextField(
-            controller: phoneController,
-            hint: AppLocalizations.of(context)!.phone,
+            controller: emailController,
+            hint: AppLocalizations.of(context)!.email,
             keyboardType: TextInputType.phone,
             onChanged: (phone) {
               loginBloc.enableLoginButton(
-                phone: phoneController.text,
+                phone: emailController.text,
                 password: passwordController.text,
               );
             },
@@ -66,9 +66,10 @@ class _LoginFormState extends State<LoginForm> {
             controller: passwordController,
             hint: AppLocalizations.of(context)!.password,
             keyboardType: TextInputType.text,
+            isObsecure: true,
             onChanged: (password) {
               loginBloc.enableLoginButton(
-                  phone: phoneController.text,
+                  phone: emailController.text,
                   password: passwordController.text);
             },
           ),
@@ -99,7 +100,7 @@ class _LoginFormState extends State<LoginForm> {
                 enableLoginButton: (isEnabled, _) {
                   log(isEnabled.toString());
                   return MainButton(
-                    onTap: null,
+                    onTap: () {},
                     label: AppLocalizations.of(context)!.login,
                     isOutlined: !isEnabled,
                   );
@@ -110,7 +111,7 @@ class _LoginFormState extends State<LoginForm> {
                   },
                   label: AppLocalizations.of(context)!.login,
                   isOutlined: passwordController.text.isEmpty &&
-                      phoneController.text.isEmpty,
+                      emailController.text.isEmpty,
                 ),
               );
             },
