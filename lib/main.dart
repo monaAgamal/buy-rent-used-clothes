@@ -12,12 +12,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:buy_rent_used_clothes/di/injection_container.dart' as di;
 import 'package:firebase_auth/firebase_auth.dart';
 
-Future init() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-// Ideal time to initialize
-//   await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
-}
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +21,12 @@ void main() async {
   runApp(const MyApp());
 }
 
+Future init() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+// Ideal time to initialize
+//   await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
+}
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 

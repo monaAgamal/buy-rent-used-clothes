@@ -45,8 +45,8 @@ android {
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.buy_rent_used_clothes"
-        minSdkVersion 19
-        targetSdkVersion 19
+        minSdkVersion 21
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
     }
