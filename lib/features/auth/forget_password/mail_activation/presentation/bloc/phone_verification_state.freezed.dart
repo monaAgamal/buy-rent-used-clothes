@@ -22,6 +22,7 @@ mixin _$PhoneVerificationState {
     required TResult Function() loading,
     required TResult Function(bool isEnaled) isEnabled,
     required TResult Function() successfullyVerfied,
+    required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$PhoneVerificationState {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$PhoneVerificationState {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$PhoneVerificationState {
     required TResult Function(Loading value) loading,
     required TResult Function(IsEnabled value) isEnabled,
     required TResult Function(SuccessfullyVerfied value) successfullyVerfied,
+    required TResult Function(Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$PhoneVerificationState {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$PhoneVerificationState {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +134,7 @@ class _$Initial implements Initial {
     required TResult Function() loading,
     required TResult Function(bool isEnaled) isEnabled,
     required TResult Function() successfullyVerfied,
+    required TResult Function(String message) error,
   }) {
     return initial();
   }
@@ -139,6 +146,7 @@ class _$Initial implements Initial {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
   }) {
     return initial?.call();
   }
@@ -150,6 +158,7 @@ class _$Initial implements Initial {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -165,6 +174,7 @@ class _$Initial implements Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(IsEnabled value) isEnabled,
     required TResult Function(SuccessfullyVerfied value) successfullyVerfied,
+    required TResult Function(Error value) error,
   }) {
     return initial(this);
   }
@@ -176,6 +186,7 @@ class _$Initial implements Initial {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -187,6 +198,7 @@ class _$Initial implements Initial {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -243,6 +255,7 @@ class _$Loading implements Loading {
     required TResult Function() loading,
     required TResult Function(bool isEnaled) isEnabled,
     required TResult Function() successfullyVerfied,
+    required TResult Function(String message) error,
   }) {
     return loading();
   }
@@ -254,6 +267,7 @@ class _$Loading implements Loading {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
   }) {
     return loading?.call();
   }
@@ -265,6 +279,7 @@ class _$Loading implements Loading {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -280,6 +295,7 @@ class _$Loading implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(IsEnabled value) isEnabled,
     required TResult Function(SuccessfullyVerfied value) successfullyVerfied,
+    required TResult Function(Error value) error,
   }) {
     return loading(this);
   }
@@ -291,6 +307,7 @@ class _$Loading implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -302,6 +319,7 @@ class _$Loading implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -382,6 +400,7 @@ class _$IsEnabled implements IsEnabled {
     required TResult Function() loading,
     required TResult Function(bool isEnaled) isEnabled,
     required TResult Function() successfullyVerfied,
+    required TResult Function(String message) error,
   }) {
     return isEnabled(isEnaled);
   }
@@ -393,6 +412,7 @@ class _$IsEnabled implements IsEnabled {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
   }) {
     return isEnabled?.call(isEnaled);
   }
@@ -404,6 +424,7 @@ class _$IsEnabled implements IsEnabled {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (isEnabled != null) {
@@ -419,6 +440,7 @@ class _$IsEnabled implements IsEnabled {
     required TResult Function(Loading value) loading,
     required TResult Function(IsEnabled value) isEnabled,
     required TResult Function(SuccessfullyVerfied value) successfullyVerfied,
+    required TResult Function(Error value) error,
   }) {
     return isEnabled(this);
   }
@@ -430,6 +452,7 @@ class _$IsEnabled implements IsEnabled {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
   }) {
     return isEnabled?.call(this);
   }
@@ -441,6 +464,7 @@ class _$IsEnabled implements IsEnabled {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (isEnabled != null) {
@@ -504,6 +528,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
     required TResult Function() loading,
     required TResult Function(bool isEnaled) isEnabled,
     required TResult Function() successfullyVerfied,
+    required TResult Function(String message) error,
   }) {
     return successfullyVerfied();
   }
@@ -515,6 +540,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
   }) {
     return successfullyVerfied?.call();
   }
@@ -526,6 +552,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
     TResult Function()? loading,
     TResult Function(bool isEnaled)? isEnabled,
     TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (successfullyVerfied != null) {
@@ -541,6 +568,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
     required TResult Function(Loading value) loading,
     required TResult Function(IsEnabled value) isEnabled,
     required TResult Function(SuccessfullyVerfied value) successfullyVerfied,
+    required TResult Function(Error value) error,
   }) {
     return successfullyVerfied(this);
   }
@@ -552,6 +580,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
   }) {
     return successfullyVerfied?.call(this);
   }
@@ -563,6 +592,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
     TResult Function(Loading value)? loading,
     TResult Function(IsEnabled value)? isEnabled,
     TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
     required TResult orElse(),
   }) {
     if (successfullyVerfied != null) {
@@ -574,4 +604,153 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
 
 abstract class SuccessfullyVerfied implements PhoneVerificationState {
   const factory SuccessfullyVerfied() = _$SuccessfullyVerfied;
+}
+
+/// @nodoc
+abstract class $ErrorCopyWith<$Res> {
+  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
+      _$ErrorCopyWithImpl<$Res>;
+  $Res call({String message});
+}
+
+/// @nodoc
+class _$ErrorCopyWithImpl<$Res>
+    extends _$PhoneVerificationStateCopyWithImpl<$Res>
+    implements $ErrorCopyWith<$Res> {
+  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
+      : super(_value, (v) => _then(v as Error));
+
+  @override
+  Error get _value => super._value as Error;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(Error(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$Error implements Error {
+  const _$Error({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'PhoneVerificationState.error(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Error &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  $ErrorCopyWith<Error> get copyWith =>
+      _$ErrorCopyWithImpl<Error>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(bool isEnaled) isEnabled,
+    required TResult Function() successfullyVerfied,
+    required TResult Function(String message) error,
+  }) {
+    return error(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(bool isEnaled)? isEnabled,
+    TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
+  }) {
+    return error?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(bool isEnaled)? isEnabled,
+    TResult Function()? successfullyVerfied,
+    TResult Function(String message)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(IsEnabled value) isEnabled,
+    required TResult Function(SuccessfullyVerfied value) successfullyVerfied,
+    required TResult Function(Error value) error,
+  }) {
+    return error(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(IsEnabled value)? isEnabled,
+    TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
+  }) {
+    return error?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(IsEnabled value)? isEnabled,
+    TResult Function(SuccessfullyVerfied value)? successfullyVerfied,
+    TResult Function(Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Error implements PhoneVerificationState {
+  const factory Error({required final String message}) = _$Error;
+
+  String get message => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
 }

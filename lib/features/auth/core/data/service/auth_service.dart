@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:buy_rent_used_clothes/core/data/models/user_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
@@ -22,7 +20,7 @@ class AuthService {
 
     // .then((value) async => await updateUserName(name: name));
     await updateUserName(name: name);
-    await sendVerificationEmail(email: email);
+    await sendVerificationEmail();
     return FirebaseAuth.instance.currentUser != null
         ? UserModel(
             id: FirebaseAuth.instance.currentUser!.uid,
@@ -36,7 +34,8 @@ class AuthService {
   Future updateUserName({required String name}) async {
     await FirebaseAuth.instance.currentUser?.updateDisplayName(name);
   }
-Future<UserModel?> login({
+
+  Future<UserModel?> login({
     required String email,
     required String password,
   }) async {
@@ -52,9 +51,7 @@ Future<UserModel?> login({
         : null;
   }
 
-  Future<void> sendVerificationEmail({
-    required String email,
-  }) async {
+  Future<void> sendVerificationEmail() async {
     await FirebaseAuth.instance.currentUser!.sendEmailVerification();
   }
 

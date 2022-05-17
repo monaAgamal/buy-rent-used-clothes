@@ -1,4 +1,5 @@
 import 'package:buy_rent_used_clothes/core/data/models/user_model.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 abstract class AuthRemoteDataSource {
   Future<UserModel> login({
@@ -9,16 +10,15 @@ abstract class AuthRemoteDataSource {
     required String email,
     required String passWord,
     required String phone,
-    required String name ,
+    required String name,
   });
 
-  Future<void> sendVerificationEmail({
-    required String email,
-  });
-  
+  Future<bool> sendVerificationEmail();
+
   Future<UserModel> verify({
     required String email,
     required String otp,
   });
 
+  Stream<User?> checkAuthStatus();
 }

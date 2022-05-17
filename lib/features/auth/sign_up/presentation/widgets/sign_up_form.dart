@@ -157,6 +157,27 @@ class _SignUpFormState extends State<SignUpForm> {
                     label: AppLocalizations.of(context)!.signUp,
                     isOutlined: !isEnabled,
                   ),
+                  error: (_) {
+                    return MainButton(
+                      onTap: () {
+                        final bool? isValidForm =
+                            _formKey.currentState?.validate();
+                        if (isValidForm != null && isValidForm) {
+                          signUpBloc.signUp(
+                            params: SignUpParams(
+                              name: nameController.text,
+                              email: emailController.text,
+                              password: passwordController.text,
+                              phone: '01062803457',
+                            ),
+                          );
+                        }
+                        // Navigator.of(context).pushReplacementNamed(homeRoute);
+                      },
+                      label: AppLocalizations.of(context)!.signUp,
+                      isOutlined: false,
+                    );
+                  },
                   orElse: () => MainButton(
                     onTap: () {},
                     label: AppLocalizations.of(context)!.signUp,

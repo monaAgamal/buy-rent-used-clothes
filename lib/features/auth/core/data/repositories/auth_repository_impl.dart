@@ -56,8 +56,7 @@ class AuthRemoteRepositoryImpl implements AuthRepository {
           email: params.email, passWord: params.password);
       await authLocalDataSource.persistAuth(userModel: userModel);
       if (!userModel.isVerified) {
-        await authRemoteDataSource.sendVerificationEmail(
-            email: userModel.email);
+        await authRemoteDataSource.sendVerificationEmail();
       }
       return Right(
         LoggedInUserEntity(
@@ -65,6 +64,16 @@ class AuthRemoteRepositoryImpl implements AuthRepository {
           isVerified: userModel.isVerified,
         ),
       );
+    } on ApplicationException catch (e) {
+      return Left(firebaseExceptionToFailureDecoder(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, bool>> sendAccountEmailActivation() async {
+    try {
+      final isSent = await authRemoteDataSource.sendVerificationEmail();
+      return Right(isSent);
     } on ApplicationException catch (e) {
       return Left(firebaseExceptionToFailureDecoder(e));
     }

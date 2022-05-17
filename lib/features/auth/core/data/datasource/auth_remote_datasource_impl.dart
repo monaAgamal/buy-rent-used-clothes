@@ -41,17 +41,21 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
 
   @override
   Future<UserModel> verify({required String email, required String otp}) {
-    // TODO: implement verify
     throw UnimplementedError();
   }
 
   @override
-  Future<void> sendVerificationEmail({required String email}) async {
+  Future<bool> sendVerificationEmail() async {
     try {
-      await authService.sendVerificationEmail(email: email);
+      await authService.sendVerificationEmail();
     } on FirebaseAuthException catch (e) {
       firebaseAuthExceptionDecoder(firebaseAuthException: e);
     }
     throw GenericException("Some thing went wrong");
+  }
+
+  @override
+  Stream<User?> checkAuthStatus() {
+    return authService.checkAuthStateChanges();
   }
 }

@@ -7,32 +7,44 @@ class AppErrorAlertDialoge extends StatelessWidget {
   final String title;
   final String body;
   const AppErrorAlertDialoge(
-      {Key? key, required this.title, required this.body})
+      {
+    Key? key,
+    required this.title,
+    required this.body,
+  })
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
+    return AlertDialog(
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(title),
-          const SizedBox(height: 12),
-          Text(body),
-          const SizedBox(height: 12),
-          MainButton(
-            label: AppLocalizations.of(context)!.ok,
-            isOutlined: false,
-            onTap: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        ],
+      content: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(title),
+            const SizedBox(height: 12),
+            Text(
+              body,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 24),
+            MainButton(
+              label: AppLocalizations.of(context)!.ok,
+              isOutlined: false,
+              onTap: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

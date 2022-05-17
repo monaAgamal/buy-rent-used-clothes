@@ -8,6 +8,8 @@ abstract class PhoneVerificationState with _$PhoneVerificationState{
   const factory PhoneVerificationState.isEnabled({required bool isEnaled}) = IsEnabled ;
   const factory PhoneVerificationState.successfullyVerfied() = SuccessfullyVerfied ;
 
+const factory PhoneVerificationState.error({required String message}) = Error;
+
 }
 
 

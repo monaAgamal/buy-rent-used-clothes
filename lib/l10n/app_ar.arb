@@ -25,6 +25,8 @@
     "signUpError" : "خطأ في إنشاء الحساب" ,
     "verifyAccount":"تفعيل الحساب" ,
     "codeSentToYourEmail" : "تم إرسال رسالة تفعيل علي البريد الالكتروني " ,
-    "resendEmail" : "إعادة الإرسال" , 
-   "checkMailToVerify"  : "الرجاء التأكد من وصول الرسالة للتفعيل والمتابعة"
+    "resendEmail" : "إعادة الإرسال" ,
+   "checkMailToVerify"  : "الرجاء التأكد من وصول الرسالة للتفعيل والمتابعة" ,
+   "canNotOpenMailApps" : "لايوجد تطبيق لفتح الرسائل الإلكترونية"  ,
+   "plsActivateAccountManuallyAndProceed" : "برجاء تفعيل الحساب من البريد الإلكتروني المرسل إليك والمتابعة"
 }
