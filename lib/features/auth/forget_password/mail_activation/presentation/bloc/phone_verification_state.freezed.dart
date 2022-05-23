@@ -92,20 +92,20 @@ class _$PhoneVerificationStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> {
-  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
-      _$InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res>
+class __$$InitialCopyWithImpl<$Res>
     extends _$PhoneVerificationStateCopyWithImpl<$Res>
-    implements $InitialCopyWith<$Res> {
-  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
-      : super(_value, (v) => _then(v as Initial));
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+      : super(_value, (v) => _then(v as _$Initial));
 
   @override
-  Initial get _value => super._value as Initial;
+  _$Initial get _value => super._value as _$Initial;
 }
 
 /// @nodoc
@@ -121,7 +121,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -213,20 +213,20 @@ abstract class Initial implements PhoneVerificationState {
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> {
-  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
-      _$LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingCopyWith<$Res> {
+  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res>
+class __$$LoadingCopyWithImpl<$Res>
     extends _$PhoneVerificationStateCopyWithImpl<$Res>
-    implements $LoadingCopyWith<$Res> {
-  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
-      : super(_value, (v) => _then(v as Loading));
+    implements _$$LoadingCopyWith<$Res> {
+  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+      : super(_value, (v) => _then(v as _$Loading));
 
   @override
-  Loading get _value => super._value as Loading;
+  _$Loading get _value => super._value as _$Loading;
 }
 
 /// @nodoc
@@ -242,7 +242,7 @@ class _$Loading implements Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Loading);
+        (other.runtimeType == runtimeType && other is _$Loading);
   }
 
   @override
@@ -334,27 +334,29 @@ abstract class Loading implements PhoneVerificationState {
 }
 
 /// @nodoc
-abstract class $IsEnabledCopyWith<$Res> {
-  factory $IsEnabledCopyWith(IsEnabled value, $Res Function(IsEnabled) then) =
-      _$IsEnabledCopyWithImpl<$Res>;
+abstract class _$$IsEnabledCopyWith<$Res> {
+  factory _$$IsEnabledCopyWith(
+          _$IsEnabled value, $Res Function(_$IsEnabled) then) =
+      __$$IsEnabledCopyWithImpl<$Res>;
   $Res call({bool isEnaled});
 }
 
 /// @nodoc
-class _$IsEnabledCopyWithImpl<$Res>
+class __$$IsEnabledCopyWithImpl<$Res>
     extends _$PhoneVerificationStateCopyWithImpl<$Res>
-    implements $IsEnabledCopyWith<$Res> {
-  _$IsEnabledCopyWithImpl(IsEnabled _value, $Res Function(IsEnabled) _then)
-      : super(_value, (v) => _then(v as IsEnabled));
+    implements _$$IsEnabledCopyWith<$Res> {
+  __$$IsEnabledCopyWithImpl(
+      _$IsEnabled _value, $Res Function(_$IsEnabled) _then)
+      : super(_value, (v) => _then(v as _$IsEnabled));
 
   @override
-  IsEnabled get _value => super._value as IsEnabled;
+  _$IsEnabled get _value => super._value as _$IsEnabled;
 
   @override
   $Res call({
     Object? isEnaled = freezed,
   }) {
-    return _then(IsEnabled(
+    return _then(_$IsEnabled(
       isEnaled: isEnaled == freezed
           ? _value.isEnaled
           : isEnaled // ignore: cast_nullable_to_non_nullable
@@ -380,7 +382,7 @@ class _$IsEnabled implements IsEnabled {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is IsEnabled &&
+            other is _$IsEnabled &&
             const DeepCollectionEquality().equals(other.isEnaled, isEnaled));
   }
 
@@ -390,8 +392,8 @@ class _$IsEnabled implements IsEnabled {
 
   @JsonKey(ignore: true)
   @override
-  $IsEnabledCopyWith<IsEnabled> get copyWith =>
-      _$IsEnabledCopyWithImpl<IsEnabled>(this, _$identity);
+  _$$IsEnabledCopyWith<_$IsEnabled> get copyWith =>
+      __$$IsEnabledCopyWithImpl<_$IsEnabled>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -479,27 +481,27 @@ abstract class IsEnabled implements PhoneVerificationState {
 
   bool get isEnaled => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $IsEnabledCopyWith<IsEnabled> get copyWith =>
+  _$$IsEnabledCopyWith<_$IsEnabled> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $SuccessfullyVerfiedCopyWith<$Res> {
-  factory $SuccessfullyVerfiedCopyWith(
-          SuccessfullyVerfied value, $Res Function(SuccessfullyVerfied) then) =
-      _$SuccessfullyVerfiedCopyWithImpl<$Res>;
+abstract class _$$SuccessfullyVerfiedCopyWith<$Res> {
+  factory _$$SuccessfullyVerfiedCopyWith(_$SuccessfullyVerfied value,
+          $Res Function(_$SuccessfullyVerfied) then) =
+      __$$SuccessfullyVerfiedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SuccessfullyVerfiedCopyWithImpl<$Res>
+class __$$SuccessfullyVerfiedCopyWithImpl<$Res>
     extends _$PhoneVerificationStateCopyWithImpl<$Res>
-    implements $SuccessfullyVerfiedCopyWith<$Res> {
-  _$SuccessfullyVerfiedCopyWithImpl(
-      SuccessfullyVerfied _value, $Res Function(SuccessfullyVerfied) _then)
-      : super(_value, (v) => _then(v as SuccessfullyVerfied));
+    implements _$$SuccessfullyVerfiedCopyWith<$Res> {
+  __$$SuccessfullyVerfiedCopyWithImpl(
+      _$SuccessfullyVerfied _value, $Res Function(_$SuccessfullyVerfied) _then)
+      : super(_value, (v) => _then(v as _$SuccessfullyVerfied));
 
   @override
-  SuccessfullyVerfied get _value => super._value as SuccessfullyVerfied;
+  _$SuccessfullyVerfied get _value => super._value as _$SuccessfullyVerfied;
 }
 
 /// @nodoc
@@ -515,7 +517,7 @@ class _$SuccessfullyVerfied implements SuccessfullyVerfied {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SuccessfullyVerfied);
+        (other.runtimeType == runtimeType && other is _$SuccessfullyVerfied);
   }
 
   @override
@@ -607,27 +609,27 @@ abstract class SuccessfullyVerfied implements PhoneVerificationState {
 }
 
 /// @nodoc
-abstract class $ErrorCopyWith<$Res> {
-  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
-      _$ErrorCopyWithImpl<$Res>;
+abstract class _$$ErrorCopyWith<$Res> {
+  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
+      __$$ErrorCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res>
+class __$$ErrorCopyWithImpl<$Res>
     extends _$PhoneVerificationStateCopyWithImpl<$Res>
-    implements $ErrorCopyWith<$Res> {
-  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
-      : super(_value, (v) => _then(v as Error));
+    implements _$$ErrorCopyWith<$Res> {
+  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
+      : super(_value, (v) => _then(v as _$Error));
 
   @override
-  Error get _value => super._value as Error;
+  _$Error get _value => super._value as _$Error;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(Error(
+    return _then(_$Error(
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -653,7 +655,7 @@ class _$Error implements Error {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Error &&
+            other is _$Error &&
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -663,8 +665,8 @@ class _$Error implements Error {
 
   @JsonKey(ignore: true)
   @override
-  $ErrorCopyWith<Error> get copyWith =>
-      _$ErrorCopyWithImpl<Error>(this, _$identity);
+  _$$ErrorCopyWith<_$Error> get copyWith =>
+      __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -752,5 +754,5 @@ abstract class Error implements PhoneVerificationState {
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
 }

@@ -2,11 +2,11 @@ import 'package:buy_rent_used_clothes/core/widgets/generic_text_field.dart';
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/input_phone/presentation/input_phone_bloc/input_phone_bloc.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/input_phone/presentation/input_phone_bloc/input_phone_state.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:buy_rent_used_clothes/routes/routes.dart';
 import 'package:buy_rent_used_clothes/routes/routes_args/opt_verification_args.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class InputPhoneForm extends StatefulWidget {
   const InputPhoneForm({Key? key}) : super(key: key);
@@ -25,7 +25,9 @@ class _InputPhoneFormState extends State<InputPhoneForm> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(AppLocalizations.of(context)!.phone),
+        Text(
+          S.of(context)!.phone,
+        ),
         const SizedBox(height: 16),
         GenericTextField(
           controller: _phoneController,
@@ -42,13 +44,13 @@ class _InputPhoneFormState extends State<InputPhoneForm> {
           builder: (_, state) {
             return state.maybeWhen(
               loading: () => MainButton(
-                label: AppLocalizations.of(context)!.sendOtp,
+                label: S.of(context)!.sendOtp,
                 isOutlined: true,
                 isLoading: true,
                 onTap: () {},
               ),
               enableSendPhoneButton: (isEnabled) => MainButton(
-                label: AppLocalizations.of(context)!.sendOtp,
+                label: S.of(context)!.sendOtp,
                 isOutlined: !isEnabled,
                 onTap: isEnabled
                     ? () {
@@ -59,7 +61,7 @@ class _InputPhoneFormState extends State<InputPhoneForm> {
                     : () {},
               ),
               orElse: () => MainButton(
-                label: AppLocalizations.of(context)!.sendOtp,
+                label: S.of(context)!.sendOtp,
                 isOutlined: true,
                 onTap: () {},
               ),

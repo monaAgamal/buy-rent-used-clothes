@@ -3,10 +3,10 @@ import 'package:buy_rent_used_clothes/core/widgets/generic_text_field.dart';
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
 import 'package:buy_rent_used_clothes/features/auth/login/presentation/cubit/login_cubit.dart';
 import 'package:buy_rent_used_clothes/features/auth/login/presentation/cubit/login_state.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:buy_rent_used_clothes/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -38,7 +38,7 @@ class _LoginFormState extends State<LoginForm> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Text(
-            AppLocalizations.of(context)!.welcomeBack,
+            S.of(context)!.welcomeBack,
             style: Theme.of(context).textTheme.headline5?.copyWith(
                   color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
@@ -46,13 +46,13 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const SizedBox(height: 12),
           Text(
-            AppLocalizations.of(context)!.logInToYourAccount,
+            S.of(context)!.logInToYourAccount,
             style: Theme.of(context).textTheme.bodyText2!.copyWith(),
           ),
           const SizedBox(height: 16),
           GenericTextField(
             controller: emailController,
-            hint: AppLocalizations.of(context)!.email,
+            hint: S.of(context)!.email,
             keyboardType: TextInputType.phone,
             onChanged: (phone) {
               loginBloc.enableLoginButton(
@@ -64,7 +64,7 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(height: 16),
           GenericTextField(
             controller: passwordController,
-            hint: AppLocalizations.of(context)!.password,
+            hint: S.of(context)!.password,
             keyboardType: TextInputType.text,
             isObsecure: true,
             onChanged: (password) {
@@ -81,7 +81,7 @@ class _LoginFormState extends State<LoginForm> {
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                AppLocalizations.of(context)!.forgetPassword + " ?",
+                S.of(context)!.forgetPassword + " ?",
                 style: const TextStyle(fontSize: 16),
               ),
             ),
@@ -92,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
             builder: (context, state) {
               return state.maybeWhen(
                 loading: () => MainButton(
-                  label: AppLocalizations.of(context)!.login,
+                  label: S.of(context)!.login,
                   isOutlined: true,
                   onTap: () {},
                   isLoading: true,
@@ -101,7 +101,7 @@ class _LoginFormState extends State<LoginForm> {
                   log(isEnabled.toString());
                   return MainButton(
                     onTap: () {},
-                    label: AppLocalizations.of(context)!.login,
+                    label: S.of(context)!.login,
                     isOutlined: !isEnabled,
                   );
                 },
@@ -109,7 +109,7 @@ class _LoginFormState extends State<LoginForm> {
                   onTap: () {
                     Navigator.of(context).pushReplacementNamed(homeRoute);
                   },
-                  label: AppLocalizations.of(context)!.login,
+                  label: S.of(context)!.login,
                   isOutlined: passwordController.text.isEmpty &&
                       emailController.text.isEmpty,
                 ),
@@ -125,12 +125,12 @@ class _LoginFormState extends State<LoginForm> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  AppLocalizations.of(context)!.dontHaveAccountMsg,
+                  S.of(context)!.dontHaveAccountMsg,
                   style: const TextStyle(fontSize: 18),
                 ),
                 const SizedBox(width: 4),
                 Text(
-                  AppLocalizations.of(context)!.signUp,
+                  S.of(context)!.signUp,
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold),
                 ),

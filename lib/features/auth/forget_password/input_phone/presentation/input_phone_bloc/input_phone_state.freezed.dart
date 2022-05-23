@@ -88,19 +88,19 @@ class _$InputPhoneStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> {
-  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
-      _$InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$InputPhoneStateCopyWithImpl<$Res>
-    implements $InitialCopyWith<$Res> {
-  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
-      : super(_value, (v) => _then(v as Initial));
+class __$$InitialCopyWithImpl<$Res> extends _$InputPhoneStateCopyWithImpl<$Res>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+      : super(_value, (v) => _then(v as _$Initial));
 
   @override
-  Initial get _value => super._value as Initial;
+  _$Initial get _value => super._value as _$Initial;
 }
 
 /// @nodoc
@@ -116,7 +116,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -204,19 +204,19 @@ abstract class Initial implements InputPhoneState {
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> {
-  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
-      _$LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingCopyWith<$Res> {
+  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$InputPhoneStateCopyWithImpl<$Res>
-    implements $LoadingCopyWith<$Res> {
-  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
-      : super(_value, (v) => _then(v as Loading));
+class __$$LoadingCopyWithImpl<$Res> extends _$InputPhoneStateCopyWithImpl<$Res>
+    implements _$$LoadingCopyWith<$Res> {
+  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+      : super(_value, (v) => _then(v as _$Loading));
 
   @override
-  Loading get _value => super._value as Loading;
+  _$Loading get _value => super._value as _$Loading;
 }
 
 /// @nodoc
@@ -232,7 +232,7 @@ class _$Loading implements Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Loading);
+        (other.runtimeType == runtimeType && other is _$Loading);
   }
 
   @override
@@ -320,22 +320,22 @@ abstract class Loading implements InputPhoneState {
 }
 
 /// @nodoc
-abstract class $PhoneSentSuccessfullyCopyWith<$Res> {
-  factory $PhoneSentSuccessfullyCopyWith(PhoneSentSuccessfully value,
-          $Res Function(PhoneSentSuccessfully) then) =
-      _$PhoneSentSuccessfullyCopyWithImpl<$Res>;
+abstract class _$$PhoneSentSuccessfullyCopyWith<$Res> {
+  factory _$$PhoneSentSuccessfullyCopyWith(_$PhoneSentSuccessfully value,
+          $Res Function(_$PhoneSentSuccessfully) then) =
+      __$$PhoneSentSuccessfullyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$PhoneSentSuccessfullyCopyWithImpl<$Res>
+class __$$PhoneSentSuccessfullyCopyWithImpl<$Res>
     extends _$InputPhoneStateCopyWithImpl<$Res>
-    implements $PhoneSentSuccessfullyCopyWith<$Res> {
-  _$PhoneSentSuccessfullyCopyWithImpl(
-      PhoneSentSuccessfully _value, $Res Function(PhoneSentSuccessfully) _then)
-      : super(_value, (v) => _then(v as PhoneSentSuccessfully));
+    implements _$$PhoneSentSuccessfullyCopyWith<$Res> {
+  __$$PhoneSentSuccessfullyCopyWithImpl(_$PhoneSentSuccessfully _value,
+      $Res Function(_$PhoneSentSuccessfully) _then)
+      : super(_value, (v) => _then(v as _$PhoneSentSuccessfully));
 
   @override
-  PhoneSentSuccessfully get _value => super._value as PhoneSentSuccessfully;
+  _$PhoneSentSuccessfully get _value => super._value as _$PhoneSentSuccessfully;
 }
 
 /// @nodoc
@@ -351,7 +351,7 @@ class _$PhoneSentSuccessfully implements PhoneSentSuccessfully {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is PhoneSentSuccessfully);
+        (other.runtimeType == runtimeType && other is _$PhoneSentSuccessfully);
   }
 
   @override
@@ -439,29 +439,29 @@ abstract class PhoneSentSuccessfully implements InputPhoneState {
 }
 
 /// @nodoc
-abstract class $EnableSendPhoneButtonCopyWith<$Res> {
-  factory $EnableSendPhoneButtonCopyWith(EnableSendPhoneButton value,
-          $Res Function(EnableSendPhoneButton) then) =
-      _$EnableSendPhoneButtonCopyWithImpl<$Res>;
+abstract class _$$EnableSendPhoneButtonCopyWith<$Res> {
+  factory _$$EnableSendPhoneButtonCopyWith(_$EnableSendPhoneButton value,
+          $Res Function(_$EnableSendPhoneButton) then) =
+      __$$EnableSendPhoneButtonCopyWithImpl<$Res>;
   $Res call({bool isEnabled});
 }
 
 /// @nodoc
-class _$EnableSendPhoneButtonCopyWithImpl<$Res>
+class __$$EnableSendPhoneButtonCopyWithImpl<$Res>
     extends _$InputPhoneStateCopyWithImpl<$Res>
-    implements $EnableSendPhoneButtonCopyWith<$Res> {
-  _$EnableSendPhoneButtonCopyWithImpl(
-      EnableSendPhoneButton _value, $Res Function(EnableSendPhoneButton) _then)
-      : super(_value, (v) => _then(v as EnableSendPhoneButton));
+    implements _$$EnableSendPhoneButtonCopyWith<$Res> {
+  __$$EnableSendPhoneButtonCopyWithImpl(_$EnableSendPhoneButton _value,
+      $Res Function(_$EnableSendPhoneButton) _then)
+      : super(_value, (v) => _then(v as _$EnableSendPhoneButton));
 
   @override
-  EnableSendPhoneButton get _value => super._value as EnableSendPhoneButton;
+  _$EnableSendPhoneButton get _value => super._value as _$EnableSendPhoneButton;
 
   @override
   $Res call({
     Object? isEnabled = freezed,
   }) {
-    return _then(EnableSendPhoneButton(
+    return _then(_$EnableSendPhoneButton(
       isEnabled: isEnabled == freezed
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -487,7 +487,7 @@ class _$EnableSendPhoneButton implements EnableSendPhoneButton {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is EnableSendPhoneButton &&
+            other is _$EnableSendPhoneButton &&
             const DeepCollectionEquality().equals(other.isEnabled, isEnabled));
   }
 
@@ -497,8 +497,8 @@ class _$EnableSendPhoneButton implements EnableSendPhoneButton {
 
   @JsonKey(ignore: true)
   @override
-  $EnableSendPhoneButtonCopyWith<EnableSendPhoneButton> get copyWith =>
-      _$EnableSendPhoneButtonCopyWithImpl<EnableSendPhoneButton>(
+  _$$EnableSendPhoneButtonCopyWith<_$EnableSendPhoneButton> get copyWith =>
+      __$$EnableSendPhoneButtonCopyWithImpl<_$EnableSendPhoneButton>(
           this, _$identity);
 
   @override
@@ -584,6 +584,6 @@ abstract class EnableSendPhoneButton implements InputPhoneState {
 
   bool get isEnabled => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EnableSendPhoneButtonCopyWith<EnableSendPhoneButton> get copyWith =>
+  _$$EnableSendPhoneButtonCopyWith<_$EnableSendPhoneButton> get copyWith =>
       throw _privateConstructorUsedError;
 }

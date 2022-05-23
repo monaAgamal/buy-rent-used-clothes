@@ -1,7 +1,7 @@
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppErrorAlertDialoge extends StatelessWidget {
   final String title;
@@ -37,7 +37,7 @@ class AppErrorAlertDialoge extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             MainButton(
-              label: AppLocalizations.of(context)!.ok,
+              label: S.of(context)!.ok,
               isOutlined: false,
               onTap: () {
                 Navigator.of(context).pop();

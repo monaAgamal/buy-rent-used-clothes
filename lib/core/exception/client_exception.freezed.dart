@@ -86,22 +86,22 @@ class _$ClientExceptionCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $EmailAlreadyInUseCopyWith<$Res> {
-  factory $EmailAlreadyInUseCopyWith(
-          EmailAlreadyInUse value, $Res Function(EmailAlreadyInUse) then) =
-      _$EmailAlreadyInUseCopyWithImpl<$Res>;
+abstract class _$$EmailAlreadyInUseCopyWith<$Res> {
+  factory _$$EmailAlreadyInUseCopyWith(
+          _$EmailAlreadyInUse value, $Res Function(_$EmailAlreadyInUse) then) =
+      __$$EmailAlreadyInUseCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$EmailAlreadyInUseCopyWithImpl<$Res>
+class __$$EmailAlreadyInUseCopyWithImpl<$Res>
     extends _$ClientExceptionCopyWithImpl<$Res>
-    implements $EmailAlreadyInUseCopyWith<$Res> {
-  _$EmailAlreadyInUseCopyWithImpl(
-      EmailAlreadyInUse _value, $Res Function(EmailAlreadyInUse) _then)
-      : super(_value, (v) => _then(v as EmailAlreadyInUse));
+    implements _$$EmailAlreadyInUseCopyWith<$Res> {
+  __$$EmailAlreadyInUseCopyWithImpl(
+      _$EmailAlreadyInUse _value, $Res Function(_$EmailAlreadyInUse) _then)
+      : super(_value, (v) => _then(v as _$EmailAlreadyInUse));
 
   @override
-  EmailAlreadyInUse get _value => super._value as EmailAlreadyInUse;
+  _$EmailAlreadyInUse get _value => super._value as _$EmailAlreadyInUse;
 }
 
 /// @nodoc
@@ -117,7 +117,7 @@ class _$EmailAlreadyInUse implements EmailAlreadyInUse {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is EmailAlreadyInUse);
+        (other.runtimeType == runtimeType && other is _$EmailAlreadyInUse);
   }
 
   @override
@@ -203,22 +203,22 @@ abstract class EmailAlreadyInUse implements ClientException {
 }
 
 /// @nodoc
-abstract class $WaekPasswordCopyWith<$Res> {
-  factory $WaekPasswordCopyWith(
-          WaekPassword value, $Res Function(WaekPassword) then) =
-      _$WaekPasswordCopyWithImpl<$Res>;
+abstract class _$$WaekPasswordCopyWith<$Res> {
+  factory _$$WaekPasswordCopyWith(
+          _$WaekPassword value, $Res Function(_$WaekPassword) then) =
+      __$$WaekPasswordCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WaekPasswordCopyWithImpl<$Res>
+class __$$WaekPasswordCopyWithImpl<$Res>
     extends _$ClientExceptionCopyWithImpl<$Res>
-    implements $WaekPasswordCopyWith<$Res> {
-  _$WaekPasswordCopyWithImpl(
-      WaekPassword _value, $Res Function(WaekPassword) _then)
-      : super(_value, (v) => _then(v as WaekPassword));
+    implements _$$WaekPasswordCopyWith<$Res> {
+  __$$WaekPasswordCopyWithImpl(
+      _$WaekPassword _value, $Res Function(_$WaekPassword) _then)
+      : super(_value, (v) => _then(v as _$WaekPassword));
 
   @override
-  WaekPassword get _value => super._value as WaekPassword;
+  _$WaekPassword get _value => super._value as _$WaekPassword;
 }
 
 /// @nodoc
@@ -234,7 +234,7 @@ class _$WaekPassword implements WaekPassword {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is WaekPassword);
+        (other.runtimeType == runtimeType && other is _$WaekPassword);
   }
 
   @override
@@ -320,22 +320,22 @@ abstract class WaekPassword implements ClientException {
 }
 
 /// @nodoc
-abstract class $InvalidEmailCopyWith<$Res> {
-  factory $InvalidEmailCopyWith(
-          InvalidEmail value, $Res Function(InvalidEmail) then) =
-      _$InvalidEmailCopyWithImpl<$Res>;
+abstract class _$$InvalidEmailCopyWith<$Res> {
+  factory _$$InvalidEmailCopyWith(
+          _$InvalidEmail value, $Res Function(_$InvalidEmail) then) =
+      __$$InvalidEmailCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InvalidEmailCopyWithImpl<$Res>
+class __$$InvalidEmailCopyWithImpl<$Res>
     extends _$ClientExceptionCopyWithImpl<$Res>
-    implements $InvalidEmailCopyWith<$Res> {
-  _$InvalidEmailCopyWithImpl(
-      InvalidEmail _value, $Res Function(InvalidEmail) _then)
-      : super(_value, (v) => _then(v as InvalidEmail));
+    implements _$$InvalidEmailCopyWith<$Res> {
+  __$$InvalidEmailCopyWithImpl(
+      _$InvalidEmail _value, $Res Function(_$InvalidEmail) _then)
+      : super(_value, (v) => _then(v as _$InvalidEmail));
 
   @override
-  InvalidEmail get _value => super._value as InvalidEmail;
+  _$InvalidEmail get _value => super._value as _$InvalidEmail;
 }
 
 /// @nodoc
@@ -351,7 +351,7 @@ class _$InvalidEmail implements InvalidEmail {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is InvalidEmail);
+        (other.runtimeType == runtimeType && other is _$InvalidEmail);
   }
 
   @override
@@ -437,22 +437,22 @@ abstract class InvalidEmail implements ClientException {
 }
 
 /// @nodoc
-abstract class $UnKnownErrorCopyWith<$Res> {
-  factory $UnKnownErrorCopyWith(
-          UnKnownError value, $Res Function(UnKnownError) then) =
-      _$UnKnownErrorCopyWithImpl<$Res>;
+abstract class _$$UnKnownErrorCopyWith<$Res> {
+  factory _$$UnKnownErrorCopyWith(
+          _$UnKnownError value, $Res Function(_$UnKnownError) then) =
+      __$$UnKnownErrorCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$UnKnownErrorCopyWithImpl<$Res>
+class __$$UnKnownErrorCopyWithImpl<$Res>
     extends _$ClientExceptionCopyWithImpl<$Res>
-    implements $UnKnownErrorCopyWith<$Res> {
-  _$UnKnownErrorCopyWithImpl(
-      UnKnownError _value, $Res Function(UnKnownError) _then)
-      : super(_value, (v) => _then(v as UnKnownError));
+    implements _$$UnKnownErrorCopyWith<$Res> {
+  __$$UnKnownErrorCopyWithImpl(
+      _$UnKnownError _value, $Res Function(_$UnKnownError) _then)
+      : super(_value, (v) => _then(v as _$UnKnownError));
 
   @override
-  UnKnownError get _value => super._value as UnKnownError;
+  _$UnKnownError get _value => super._value as _$UnKnownError;
 }
 
 /// @nodoc
@@ -468,7 +468,7 @@ class _$UnKnownError implements UnKnownError {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is UnKnownError);
+        (other.runtimeType == runtimeType && other is _$UnKnownError);
   }
 
   @override

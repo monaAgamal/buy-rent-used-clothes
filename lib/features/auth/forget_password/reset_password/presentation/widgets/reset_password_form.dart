@@ -2,10 +2,10 @@ import 'package:buy_rent_used_clothes/core/widgets/generic_text_field.dart';
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/reset_password/presentation/cubit/reset_password_cubit.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/reset_password/presentation/cubit/reset_password_state.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:buy_rent_used_clothes/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class ResetPasswordForm extends StatefulWidget {
@@ -28,10 +28,10 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(AppLocalizations.of(context)!.newPassword),
+          Text(S.of(context)!.newPassword),
           const SizedBox(height: 16),
           GenericTextField(
-            hint: AppLocalizations.of(context)!.newPassword,
+            hint: S.of(context)!.newPassword,
             isObsecure: true,
             onChanged: (newPassword) {
               _cubit.enableConfirmPasswordButton(
@@ -42,10 +42,10 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
             controller: _passwordController,
           ),
           const SizedBox(height: 16),
-          Text(AppLocalizations.of(context)!.confirmNewPassword),
+          Text(S.of(context)!.confirmNewPassword),
           const SizedBox(height: 16),
           GenericTextField(
-            hint: AppLocalizations.of(context)!.confirmPassword,
+            hint: S.of(context)!.confirmPassword,
             isObsecure: true,
             onChanged: (newPassword) {
               _cubit.enableConfirmPasswordButton(
@@ -61,7 +61,7 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
               return state.maybeWhen(
                 isEnabled: (isEnabled) {
                   return MainButton(
-                    label: AppLocalizations.of(context)!.confirmPassword,
+                    label: S.of(context)!.confirmPassword,
                     isOutlined: !isEnabled,
                     onTap: isEnabled
                         ? () {
@@ -71,7 +71,7 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
                   );
                 },
                 orElse: () => MainButton(
-                  label: AppLocalizations.of(context)!.confirmPassword,
+                  label: S.of(context)!.confirmPassword,
                   isOutlined: true,
                   onTap: () {},
                 ),

@@ -1,7 +1,7 @@
 import 'package:buy_rent_used_clothes/features/auth/forget_password/reset_password/presentation/cubit/reset_password_cubit.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/reset_password/presentation/widgets/reset_password_form.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class ResetPasswordPage extends StatelessWidget {
@@ -14,7 +14,7 @@ class ResetPasswordPage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          AppLocalizations.of(context)!.resetPassword,
+          S.of(context)!.resetPassword,
         ),
       ),
       body:   Padding(

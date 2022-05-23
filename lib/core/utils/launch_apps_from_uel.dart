@@ -1,8 +1,8 @@
 
 import 'package:buy_rent_used_clothes/core/widgets/app_error_alert_dialoge.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:open_mail_app/open_mail_app.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void openMail({required BuildContext context}) async {
   /// Android: Will open mail app or show native picker.
@@ -14,9 +14,9 @@ void openMail({required BuildContext context}) async {
     showDialog(
       context: context,
       builder: (context) => AppErrorAlertDialoge(
-        title: AppLocalizations.of(context)!.canNotOpenMailApps,
+        title: S.of(context)!.canNotOpenMailApps,
         body:
-            AppLocalizations.of(context)!.plsActivateAccountManuallyAndProceed,
+            S.of(context)!.plsActivateAccountManuallyAndProceed,
       ),
     );
   } else if (!result.didOpen && result.canOpen) {

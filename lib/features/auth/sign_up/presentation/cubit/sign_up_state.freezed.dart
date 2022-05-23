@@ -91,19 +91,19 @@ class _$SignUpStateCopyWithImpl<$Res> implements $SignUpStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> {
-  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
-      _$InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
-    implements $InitialCopyWith<$Res> {
-  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
-      : super(_value, (v) => _then(v as Initial));
+class __$$InitialCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+      : super(_value, (v) => _then(v as _$Initial));
 
   @override
-  Initial get _value => super._value as Initial;
+  _$Initial get _value => super._value as _$Initial;
 }
 
 /// @nodoc
@@ -119,7 +119,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -211,29 +211,29 @@ abstract class Initial implements SignUpState {
 }
 
 /// @nodoc
-abstract class $EnableSignUpBtnCopyWith<$Res> {
-  factory $EnableSignUpBtnCopyWith(
-          EnableSignUpBtn value, $Res Function(EnableSignUpBtn) then) =
-      _$EnableSignUpBtnCopyWithImpl<$Res>;
+abstract class _$$EnableSignUpBtnCopyWith<$Res> {
+  factory _$$EnableSignUpBtnCopyWith(
+          _$EnableSignUpBtn value, $Res Function(_$EnableSignUpBtn) then) =
+      __$$EnableSignUpBtnCopyWithImpl<$Res>;
   $Res call({bool isEnabled});
 }
 
 /// @nodoc
-class _$EnableSignUpBtnCopyWithImpl<$Res>
+class __$$EnableSignUpBtnCopyWithImpl<$Res>
     extends _$SignUpStateCopyWithImpl<$Res>
-    implements $EnableSignUpBtnCopyWith<$Res> {
-  _$EnableSignUpBtnCopyWithImpl(
-      EnableSignUpBtn _value, $Res Function(EnableSignUpBtn) _then)
-      : super(_value, (v) => _then(v as EnableSignUpBtn));
+    implements _$$EnableSignUpBtnCopyWith<$Res> {
+  __$$EnableSignUpBtnCopyWithImpl(
+      _$EnableSignUpBtn _value, $Res Function(_$EnableSignUpBtn) _then)
+      : super(_value, (v) => _then(v as _$EnableSignUpBtn));
 
   @override
-  EnableSignUpBtn get _value => super._value as EnableSignUpBtn;
+  _$EnableSignUpBtn get _value => super._value as _$EnableSignUpBtn;
 
   @override
   $Res call({
     Object? isEnabled = freezed,
   }) {
-    return _then(EnableSignUpBtn(
+    return _then(_$EnableSignUpBtn(
       isEnabled: isEnabled == freezed
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -259,7 +259,7 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is EnableSignUpBtn &&
+            other is _$EnableSignUpBtn &&
             const DeepCollectionEquality().equals(other.isEnabled, isEnabled));
   }
 
@@ -269,8 +269,8 @@ class _$EnableSignUpBtn implements EnableSignUpBtn {
 
   @JsonKey(ignore: true)
   @override
-  $EnableSignUpBtnCopyWith<EnableSignUpBtn> get copyWith =>
-      _$EnableSignUpBtnCopyWithImpl<EnableSignUpBtn>(this, _$identity);
+  _$$EnableSignUpBtnCopyWith<_$EnableSignUpBtn> get copyWith =>
+      __$$EnableSignUpBtnCopyWithImpl<_$EnableSignUpBtn>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -359,24 +359,24 @@ abstract class EnableSignUpBtn implements SignUpState {
 
   bool get isEnabled => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EnableSignUpBtnCopyWith<EnableSignUpBtn> get copyWith =>
+  _$$EnableSignUpBtnCopyWith<_$EnableSignUpBtn> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> {
-  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
-      _$LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingCopyWith<$Res> {
+  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
-    implements $LoadingCopyWith<$Res> {
-  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
-      : super(_value, (v) => _then(v as Loading));
+class __$$LoadingCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
+    implements _$$LoadingCopyWith<$Res> {
+  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+      : super(_value, (v) => _then(v as _$Loading));
 
   @override
-  Loading get _value => super._value as Loading;
+  _$Loading get _value => super._value as _$Loading;
 }
 
 /// @nodoc
@@ -392,7 +392,7 @@ class _$Loading implements Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Loading);
+        (other.runtimeType == runtimeType && other is _$Loading);
   }
 
   @override
@@ -484,22 +484,22 @@ abstract class Loading implements SignUpState {
 }
 
 /// @nodoc
-abstract class $SignedUpSuccessfullyCopyWith<$Res> {
-  factory $SignedUpSuccessfullyCopyWith(SignedUpSuccessfully value,
-          $Res Function(SignedUpSuccessfully) then) =
-      _$SignedUpSuccessfullyCopyWithImpl<$Res>;
+abstract class _$$SignedUpSuccessfullyCopyWith<$Res> {
+  factory _$$SignedUpSuccessfullyCopyWith(_$SignedUpSuccessfully value,
+          $Res Function(_$SignedUpSuccessfully) then) =
+      __$$SignedUpSuccessfullyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$SignedUpSuccessfullyCopyWithImpl<$Res>
+class __$$SignedUpSuccessfullyCopyWithImpl<$Res>
     extends _$SignUpStateCopyWithImpl<$Res>
-    implements $SignedUpSuccessfullyCopyWith<$Res> {
-  _$SignedUpSuccessfullyCopyWithImpl(
-      SignedUpSuccessfully _value, $Res Function(SignedUpSuccessfully) _then)
-      : super(_value, (v) => _then(v as SignedUpSuccessfully));
+    implements _$$SignedUpSuccessfullyCopyWith<$Res> {
+  __$$SignedUpSuccessfullyCopyWithImpl(_$SignedUpSuccessfully _value,
+      $Res Function(_$SignedUpSuccessfully) _then)
+      : super(_value, (v) => _then(v as _$SignedUpSuccessfully));
 
   @override
-  SignedUpSuccessfully get _value => super._value as SignedUpSuccessfully;
+  _$SignedUpSuccessfully get _value => super._value as _$SignedUpSuccessfully;
 }
 
 /// @nodoc
@@ -515,7 +515,7 @@ class _$SignedUpSuccessfully implements SignedUpSuccessfully {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SignedUpSuccessfully);
+        (other.runtimeType == runtimeType && other is _$SignedUpSuccessfully);
   }
 
   @override
@@ -607,26 +607,26 @@ abstract class SignedUpSuccessfully implements SignUpState {
 }
 
 /// @nodoc
-abstract class $ErrorCopyWith<$Res> {
-  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
-      _$ErrorCopyWithImpl<$Res>;
+abstract class _$$ErrorCopyWith<$Res> {
+  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
+      __$$ErrorCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
-    implements $ErrorCopyWith<$Res> {
-  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
-      : super(_value, (v) => _then(v as Error));
+class __$$ErrorCopyWithImpl<$Res> extends _$SignUpStateCopyWithImpl<$Res>
+    implements _$$ErrorCopyWith<$Res> {
+  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
+      : super(_value, (v) => _then(v as _$Error));
 
   @override
-  Error get _value => super._value as Error;
+  _$Error get _value => super._value as _$Error;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(Error(
+    return _then(_$Error(
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -652,7 +652,7 @@ class _$Error implements Error {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Error &&
+            other is _$Error &&
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -662,8 +662,8 @@ class _$Error implements Error {
 
   @JsonKey(ignore: true)
   @override
-  $ErrorCopyWith<Error> get copyWith =>
-      _$ErrorCopyWithImpl<Error>(this, _$identity);
+  _$$ErrorCopyWith<_$Error> get copyWith =>
+      __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -751,5 +751,5 @@ abstract class Error implements SignUpState {
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
 }

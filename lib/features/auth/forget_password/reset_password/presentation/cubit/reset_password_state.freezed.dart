@@ -87,19 +87,20 @@ class _$ResetPasswordStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> {
-  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
-      _$InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$ResetPasswordStateCopyWithImpl<$Res>
-    implements $InitialCopyWith<$Res> {
-  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
-      : super(_value, (v) => _then(v as Initial));
+class __$$InitialCopyWithImpl<$Res>
+    extends _$ResetPasswordStateCopyWithImpl<$Res>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+      : super(_value, (v) => _then(v as _$Initial));
 
   @override
-  Initial get _value => super._value as Initial;
+  _$Initial get _value => super._value as _$Initial;
 }
 
 /// @nodoc
@@ -115,7 +116,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -202,19 +203,20 @@ abstract class Initial implements ResetPasswordState {
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> {
-  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
-      _$LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingCopyWith<$Res> {
+  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$ResetPasswordStateCopyWithImpl<$Res>
-    implements $LoadingCopyWith<$Res> {
-  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
-      : super(_value, (v) => _then(v as Loading));
+class __$$LoadingCopyWithImpl<$Res>
+    extends _$ResetPasswordStateCopyWithImpl<$Res>
+    implements _$$LoadingCopyWith<$Res> {
+  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+      : super(_value, (v) => _then(v as _$Loading));
 
   @override
-  Loading get _value => super._value as Loading;
+  _$Loading get _value => super._value as _$Loading;
 }
 
 /// @nodoc
@@ -230,7 +232,7 @@ class _$Loading implements Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Loading);
+        (other.runtimeType == runtimeType && other is _$Loading);
   }
 
   @override
@@ -317,27 +319,29 @@ abstract class Loading implements ResetPasswordState {
 }
 
 /// @nodoc
-abstract class $IsEnabledCopyWith<$Res> {
-  factory $IsEnabledCopyWith(IsEnabled value, $Res Function(IsEnabled) then) =
-      _$IsEnabledCopyWithImpl<$Res>;
+abstract class _$$IsEnabledCopyWith<$Res> {
+  factory _$$IsEnabledCopyWith(
+          _$IsEnabled value, $Res Function(_$IsEnabled) then) =
+      __$$IsEnabledCopyWithImpl<$Res>;
   $Res call({bool isEnabled});
 }
 
 /// @nodoc
-class _$IsEnabledCopyWithImpl<$Res>
+class __$$IsEnabledCopyWithImpl<$Res>
     extends _$ResetPasswordStateCopyWithImpl<$Res>
-    implements $IsEnabledCopyWith<$Res> {
-  _$IsEnabledCopyWithImpl(IsEnabled _value, $Res Function(IsEnabled) _then)
-      : super(_value, (v) => _then(v as IsEnabled));
+    implements _$$IsEnabledCopyWith<$Res> {
+  __$$IsEnabledCopyWithImpl(
+      _$IsEnabled _value, $Res Function(_$IsEnabled) _then)
+      : super(_value, (v) => _then(v as _$IsEnabled));
 
   @override
-  IsEnabled get _value => super._value as IsEnabled;
+  _$IsEnabled get _value => super._value as _$IsEnabled;
 
   @override
   $Res call({
     Object? isEnabled = freezed,
   }) {
-    return _then(IsEnabled(
+    return _then(_$IsEnabled(
       isEnabled: isEnabled == freezed
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -363,7 +367,7 @@ class _$IsEnabled implements IsEnabled {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is IsEnabled &&
+            other is _$IsEnabled &&
             const DeepCollectionEquality().equals(other.isEnabled, isEnabled));
   }
 
@@ -373,8 +377,8 @@ class _$IsEnabled implements IsEnabled {
 
   @JsonKey(ignore: true)
   @override
-  $IsEnabledCopyWith<IsEnabled> get copyWith =>
-      _$IsEnabledCopyWithImpl<IsEnabled>(this, _$identity);
+  _$$IsEnabledCopyWith<_$IsEnabled> get copyWith =>
+      __$$IsEnabledCopyWithImpl<_$IsEnabled>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -457,27 +461,27 @@ abstract class IsEnabled implements ResetPasswordState {
 
   bool get isEnabled => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $IsEnabledCopyWith<IsEnabled> get copyWith =>
+  _$$IsEnabledCopyWith<_$IsEnabled> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ConfirmedSuccessfullyCopyWith<$Res> {
-  factory $ConfirmedSuccessfullyCopyWith(ConfirmedSuccessfully value,
-          $Res Function(ConfirmedSuccessfully) then) =
-      _$ConfirmedSuccessfullyCopyWithImpl<$Res>;
+abstract class _$$ConfirmedSuccessfullyCopyWith<$Res> {
+  factory _$$ConfirmedSuccessfullyCopyWith(_$ConfirmedSuccessfully value,
+          $Res Function(_$ConfirmedSuccessfully) then) =
+      __$$ConfirmedSuccessfullyCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$ConfirmedSuccessfullyCopyWithImpl<$Res>
+class __$$ConfirmedSuccessfullyCopyWithImpl<$Res>
     extends _$ResetPasswordStateCopyWithImpl<$Res>
-    implements $ConfirmedSuccessfullyCopyWith<$Res> {
-  _$ConfirmedSuccessfullyCopyWithImpl(
-      ConfirmedSuccessfully _value, $Res Function(ConfirmedSuccessfully) _then)
-      : super(_value, (v) => _then(v as ConfirmedSuccessfully));
+    implements _$$ConfirmedSuccessfullyCopyWith<$Res> {
+  __$$ConfirmedSuccessfullyCopyWithImpl(_$ConfirmedSuccessfully _value,
+      $Res Function(_$ConfirmedSuccessfully) _then)
+      : super(_value, (v) => _then(v as _$ConfirmedSuccessfully));
 
   @override
-  ConfirmedSuccessfully get _value => super._value as ConfirmedSuccessfully;
+  _$ConfirmedSuccessfully get _value => super._value as _$ConfirmedSuccessfully;
 }
 
 /// @nodoc
@@ -493,7 +497,7 @@ class _$ConfirmedSuccessfully implements ConfirmedSuccessfully {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is ConfirmedSuccessfully);
+        (other.runtimeType == runtimeType && other is _$ConfirmedSuccessfully);
   }
 
   @override

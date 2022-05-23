@@ -20,6 +20,8 @@ import '../features/auth/core/domain/datasources/auth_local_datasource.dart'
 import '../features/auth/core/domain/datasources/auth_remote_datasource.dart'
     as _i9;
 import '../features/auth/core/domain/repositories/auth_repository.dart' as _i11;
+import '../features/auth/core/domain/usecases/auth_status_changes_usecase.dart'
+    as _i18;
 import '../features/auth/core/domain/usecases/check_auth_usecase.dart' as _i13;
 import '../features/auth/core/presentation/cubit/auth_status_cubit.dart'
     as _i17;
@@ -28,14 +30,14 @@ import '../features/auth/forget_password/input_phone/presentation/input_phone_bl
 import '../features/auth/forget_password/mail_activation/domain/email_verification_usecase.dart'
     as _i15;
 import '../features/auth/forget_password/mail_activation/presentation/bloc/phone_verification_cubit.dart'
-    as _i19;
+    as _i20;
 import '../features/auth/forget_password/reset_password/presentation/cubit/reset_password_cubit.dart'
     as _i5;
 import '../features/auth/login/domain/usecases/login_usecase.dart' as _i14;
-import '../features/auth/login/presentation/cubit/login_cubit.dart' as _i18;
+import '../features/auth/login/presentation/cubit/login_cubit.dart' as _i19;
 import '../features/auth/sign_up/domain/usecases/sign_up_usecase.dart' as _i16;
-import '../features/auth/sign_up/presentation/cubit/sign_up_cubit.dart' as _i20;
-import 'app_module.dart' as _i21; // ignore_for_file: unnecessary_lambdas
+import '../features/auth/sign_up/presentation/cubit/sign_up_cubit.dart' as _i21;
+import 'app_module.dart' as _i22; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -63,14 +65,15 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
           authRepository: get<_i11.AuthRepository>()));
   gh.factory<_i16.SignUpUsecase>(
       () => _i16.SignUpUsecase(authRepository: get<_i11.AuthRepository>()));
-  gh.singleton<_i17.AuthStatusCubit>(
-      _i17.AuthStatusCubit(get<_i13.CheckAuthStatusUseCase>()));
-  gh.factory<_i18.LoginCubit>(() => _i18.LoginCubit(get<_i14.LoginUseCase>()));
-  gh.factory<_i19.PhoneVerificationCubit>(() =>
-      _i19.PhoneVerificationCubit(get<_i15.SendEmailVerificationUsecase>()));
-  gh.factory<_i20.SignUpCubit>(
-      () => _i20.SignUpCubit(get<_i16.SignUpUsecase>()));
+  gh.singleton<_i17.AuthStatusCubit>(_i17.AuthStatusCubit(
+      get<_i13.CheckAuthStatusUseCase>(),
+      get<_i18.AuthStatusChangesUseCase<dynamic, dynamic>>()));
+  gh.factory<_i19.LoginCubit>(() => _i19.LoginCubit(get<_i14.LoginUseCase>()));
+  gh.factory<_i20.PhoneVerificationCubit>(() =>
+      _i20.PhoneVerificationCubit(get<_i15.SendEmailVerificationUsecase>()));
+  gh.factory<_i21.SignUpCubit>(
+      () => _i21.SignUpCubit(get<_i16.SignUpUsecase>()));
   return get;
 }
 
-class _$AppModule extends _i21.AppModule {}
+class _$AppModule extends _i22.AppModule {}

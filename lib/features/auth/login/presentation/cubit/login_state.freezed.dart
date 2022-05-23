@@ -92,19 +92,19 @@ class _$LoginStateCopyWithImpl<$Res> implements $LoginStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $InitialCopyWith<$Res> {
-  factory $InitialCopyWith(Initial value, $Res Function(Initial) then) =
-      _$InitialCopyWithImpl<$Res>;
+abstract class _$$InitialCopyWith<$Res> {
+  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
+      __$$InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$InitialCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements $InitialCopyWith<$Res> {
-  _$InitialCopyWithImpl(Initial _value, $Res Function(Initial) _then)
-      : super(_value, (v) => _then(v as Initial));
+class __$$InitialCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+    implements _$$InitialCopyWith<$Res> {
+  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+      : super(_value, (v) => _then(v as _$Initial));
 
   @override
-  Initial get _value => super._value as Initial;
+  _$Initial get _value => super._value as _$Initial;
 }
 
 /// @nodoc
@@ -120,7 +120,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Initial);
+        (other.runtimeType == runtimeType && other is _$Initial);
   }
 
   @override
@@ -213,30 +213,30 @@ abstract class Initial implements LoginState {
 }
 
 /// @nodoc
-abstract class $enableLoginButtonCopyWith<$Res> {
-  factory $enableLoginButtonCopyWith(
-          enableLoginButton value, $Res Function(enableLoginButton) then) =
-      _$enableLoginButtonCopyWithImpl<$Res>;
+abstract class _$$enableLoginButtonCopyWith<$Res> {
+  factory _$$enableLoginButtonCopyWith(
+          _$enableLoginButton value, $Res Function(_$enableLoginButton) then) =
+      __$$enableLoginButtonCopyWithImpl<$Res>;
   $Res call({bool isEnabled, DateTime dateTime});
 }
 
 /// @nodoc
-class _$enableLoginButtonCopyWithImpl<$Res>
+class __$$enableLoginButtonCopyWithImpl<$Res>
     extends _$LoginStateCopyWithImpl<$Res>
-    implements $enableLoginButtonCopyWith<$Res> {
-  _$enableLoginButtonCopyWithImpl(
-      enableLoginButton _value, $Res Function(enableLoginButton) _then)
-      : super(_value, (v) => _then(v as enableLoginButton));
+    implements _$$enableLoginButtonCopyWith<$Res> {
+  __$$enableLoginButtonCopyWithImpl(
+      _$enableLoginButton _value, $Res Function(_$enableLoginButton) _then)
+      : super(_value, (v) => _then(v as _$enableLoginButton));
 
   @override
-  enableLoginButton get _value => super._value as enableLoginButton;
+  _$enableLoginButton get _value => super._value as _$enableLoginButton;
 
   @override
   $Res call({
     Object? isEnabled = freezed,
     Object? dateTime = freezed,
   }) {
-    return _then(enableLoginButton(
+    return _then(_$enableLoginButton(
       isEnabled: isEnabled == freezed
           ? _value.isEnabled
           : isEnabled // ignore: cast_nullable_to_non_nullable
@@ -268,7 +268,7 @@ class _$enableLoginButton implements enableLoginButton {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is enableLoginButton &&
+            other is _$enableLoginButton &&
             const DeepCollectionEquality().equals(other.isEnabled, isEnabled) &&
             const DeepCollectionEquality().equals(other.dateTime, dateTime));
   }
@@ -281,8 +281,8 @@ class _$enableLoginButton implements enableLoginButton {
 
   @JsonKey(ignore: true)
   @override
-  $enableLoginButtonCopyWith<enableLoginButton> get copyWith =>
-      _$enableLoginButtonCopyWithImpl<enableLoginButton>(this, _$identity);
+  _$$enableLoginButtonCopyWith<_$enableLoginButton> get copyWith =>
+      __$$enableLoginButtonCopyWithImpl<_$enableLoginButton>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -374,24 +374,24 @@ abstract class enableLoginButton implements LoginState {
   bool get isEnabled => throw _privateConstructorUsedError;
   DateTime get dateTime => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $enableLoginButtonCopyWith<enableLoginButton> get copyWith =>
+  _$$enableLoginButtonCopyWith<_$enableLoginButton> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoadingCopyWith<$Res> {
-  factory $LoadingCopyWith(Loading value, $Res Function(Loading) then) =
-      _$LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingCopyWith<$Res> {
+  factory _$$LoadingCopyWith(_$Loading value, $Res Function(_$Loading) then) =
+      __$$LoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$LoadingCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements $LoadingCopyWith<$Res> {
-  _$LoadingCopyWithImpl(Loading _value, $Res Function(Loading) _then)
-      : super(_value, (v) => _then(v as Loading));
+class __$$LoadingCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+    implements _$$LoadingCopyWith<$Res> {
+  __$$LoadingCopyWithImpl(_$Loading _value, $Res Function(_$Loading) _then)
+      : super(_value, (v) => _then(v as _$Loading));
 
   @override
-  Loading get _value => super._value as Loading;
+  _$Loading get _value => super._value as _$Loading;
 }
 
 /// @nodoc
@@ -407,7 +407,7 @@ class _$Loading implements Loading {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Loading);
+        (other.runtimeType == runtimeType && other is _$Loading);
   }
 
   @override
@@ -500,26 +500,26 @@ abstract class Loading implements LoginState {
 }
 
 /// @nodoc
-abstract class $ErrorCopyWith<$Res> {
-  factory $ErrorCopyWith(Error value, $Res Function(Error) then) =
-      _$ErrorCopyWithImpl<$Res>;
+abstract class _$$ErrorCopyWith<$Res> {
+  factory _$$ErrorCopyWith(_$Error value, $Res Function(_$Error) then) =
+      __$$ErrorCopyWithImpl<$Res>;
   $Res call({String message});
 }
 
 /// @nodoc
-class _$ErrorCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements $ErrorCopyWith<$Res> {
-  _$ErrorCopyWithImpl(Error _value, $Res Function(Error) _then)
-      : super(_value, (v) => _then(v as Error));
+class __$$ErrorCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+    implements _$$ErrorCopyWith<$Res> {
+  __$$ErrorCopyWithImpl(_$Error _value, $Res Function(_$Error) _then)
+      : super(_value, (v) => _then(v as _$Error));
 
   @override
-  Error get _value => super._value as Error;
+  _$Error get _value => super._value as _$Error;
 
   @override
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(Error(
+    return _then(_$Error(
       message: message == freezed
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -545,7 +545,7 @@ class _$Error implements Error {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is Error &&
+            other is _$Error &&
             const DeepCollectionEquality().equals(other.message, message));
   }
 
@@ -555,8 +555,8 @@ class _$Error implements Error {
 
   @JsonKey(ignore: true)
   @override
-  $ErrorCopyWith<Error> get copyWith =>
-      _$ErrorCopyWithImpl<Error>(this, _$identity);
+  _$$ErrorCopyWith<_$Error> get copyWith =>
+      __$$ErrorCopyWithImpl<_$Error>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -645,25 +645,25 @@ abstract class Error implements LoginState {
 
   String get message => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ErrorCopyWith<Error> get copyWith => throw _privateConstructorUsedError;
+  _$$ErrorCopyWith<_$Error> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AuthenticatedCopyWith<$Res> {
-  factory $AuthenticatedCopyWith(
-          Authenticated value, $Res Function(Authenticated) then) =
-      _$AuthenticatedCopyWithImpl<$Res>;
+abstract class _$$AuthenticatedCopyWith<$Res> {
+  factory _$$AuthenticatedCopyWith(
+          _$Authenticated value, $Res Function(_$Authenticated) then) =
+      __$$AuthenticatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$AuthenticatedCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
-    implements $AuthenticatedCopyWith<$Res> {
-  _$AuthenticatedCopyWithImpl(
-      Authenticated _value, $Res Function(Authenticated) _then)
-      : super(_value, (v) => _then(v as Authenticated));
+class __$$AuthenticatedCopyWithImpl<$Res> extends _$LoginStateCopyWithImpl<$Res>
+    implements _$$AuthenticatedCopyWith<$Res> {
+  __$$AuthenticatedCopyWithImpl(
+      _$Authenticated _value, $Res Function(_$Authenticated) _then)
+      : super(_value, (v) => _then(v as _$Authenticated));
 
   @override
-  Authenticated get _value => super._value as Authenticated;
+  _$Authenticated get _value => super._value as _$Authenticated;
 }
 
 /// @nodoc
@@ -679,7 +679,7 @@ class _$Authenticated implements Authenticated {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is Authenticated);
+        (other.runtimeType == runtimeType && other is _$Authenticated);
   }
 
   @override

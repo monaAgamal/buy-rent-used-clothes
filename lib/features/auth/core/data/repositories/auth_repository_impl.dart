@@ -9,6 +9,7 @@ import 'package:buy_rent_used_clothes/features/auth/login/domain/entities/logged
 import 'package:buy_rent_used_clothes/features/auth/login/domain/usecases/login_usecase.dart';
 import 'package:buy_rent_used_clothes/features/auth/sign_up/domain/usecases/sign_up_usecase.dart';
 import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:injectable/injectable.dart';
 
 @Singleton(as: AuthRepository)
@@ -77,5 +78,10 @@ class AuthRemoteRepositoryImpl implements AuthRepository {
     } on ApplicationException catch (e) {
       return Left(firebaseExceptionToFailureDecoder(e));
     }
+  }
+
+  @override
+  Either<Failure, Stream<User?>> checkAuthStatus() {
+    throw UnimplementedError();
   }
 }

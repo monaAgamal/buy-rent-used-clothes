@@ -3,10 +3,10 @@ import 'package:buy_rent_used_clothes/core/widgets/app_error_alert_dialoge.dart'
 import 'package:buy_rent_used_clothes/core/widgets/main_button.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/mail_activation/presentation/bloc/phone_verification_cubit.dart';
 import 'package:buy_rent_used_clothes/features/auth/forget_password/mail_activation/presentation/bloc/phone_verification_state.dart';
+import 'package:buy_rent_used_clothes/generated/l10n.dart';
 import 'package:buy_rent_used_clothes/routes/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class PhoneVerificationForm extends StatelessWidget {
@@ -36,7 +36,7 @@ class PhoneVerificationForm extends StatelessWidget {
         children: [
           const SizedBox(height: 24),
           Text(
-            AppLocalizations.of(context)!.codeSentToYourEmail,
+            S.of(context)!.codeSentToYourEmail,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 8),
@@ -52,7 +52,7 @@ class PhoneVerificationForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          Text(AppLocalizations.of(context)!.checkMailToVerify),
+          Text(S.of(context)!.checkMailToVerify),
           const SizedBox(height: 36),
           // Padding(
           //   padding: const EdgeInsets.all(12),
@@ -86,7 +86,7 @@ class PhoneVerificationForm extends StatelessWidget {
               return state.maybeWhen(
                 isEnabled: (isEnabled) {
                   return MainButton(
-                    label: AppLocalizations.of(context)!.checkCode,
+                    label: S.of(context)!.checkCode,
                     isOutlined: !isEnabled,
                     onTap: () {
                       Navigator.of(context).pushNamed(resetPasswordROute);
@@ -95,13 +95,13 @@ class PhoneVerificationForm extends StatelessWidget {
                 },
                 loading: () {
                   return MainButton(
-                    label: AppLocalizations.of(context)!.resendEmail,
+                    label: S.of(context)!.resendEmail,
                     isOutlined: false,
                     onTap: () {},
                   );
                 },
                 orElse: () => MainButton(
-                  label: AppLocalizations.of(context)!.resendEmail,
+                  label: S.of(context)!.resendEmail,
                   isOutlined: false,
                   onTap: () {
                     bloc.sendEmailVerification();
