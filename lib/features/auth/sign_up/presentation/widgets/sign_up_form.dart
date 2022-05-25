@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:buy_rent_used_clothes/core/utils/email_validation.dart';
 import 'package:buy_rent_used_clothes/core/widgets/app_error_alert_dialoge.dart';
 import 'package:buy_rent_used_clothes/core/widgets/generic_text_field.dart';
@@ -36,7 +38,7 @@ class _SignUpFormState extends State<SignUpForm> {
             showDialog(
               context: context,
               builder: (_) => AppErrorAlertDialoge(
-                title: S.of(context)!.signUpError,
+                title: S.of(context).signUpError,
                 body: msg,
               ),
             );
@@ -54,7 +56,7 @@ class _SignUpFormState extends State<SignUpForm> {
         child: Column(
           children: [
             GenericTextField(
-              hint: S.of(context)!.name,
+              hint: S.of(context).name,
               controller: nameController,
               keyboardType: TextInputType.text,
               onChanged: (name) {
@@ -69,12 +71,12 @@ class _SignUpFormState extends State<SignUpForm> {
             const SizedBox(height: 16),
             GenericTextField(
               controller: emailController,
-              hint: S.of(context)!.email,
+              hint: S.of(context).email,
               keyboardType: TextInputType.emailAddress,
               validator: (emial) {
                 if (emailController.text.isEmpty) {
-                  return S.of(context)!.thisFieldIsRequiered;
-                } else if (!isValidEmail(email: emailController.text)) {}
+                  return S.of(context).thisFieldIsRequiered;
+                } else if (isValidEmail(email: emailController.text)) {}
                 return null;
               },
               onChanged: (emial) {
@@ -88,7 +90,7 @@ class _SignUpFormState extends State<SignUpForm> {
             ),
             const SizedBox(height: 16),
             GenericTextField(
-              hint: S.of(context)!.password,
+              hint: S.of(context).password,
               controller: passwordController,
               keyboardType: TextInputType.text,
               isObsecure: true,
@@ -104,16 +106,16 @@ class _SignUpFormState extends State<SignUpForm> {
             const SizedBox(height: 16),
             GenericTextField(
                 controller: confirmPasswordController,
-                hint: S.of(context)!.confirmPassword,
+                hint: S.of(context).confirmPassword,
                 keyboardType: TextInputType.text,
                 isObsecure: true,
                 validator: (confirmPassword) {
                   if (confirmPasswordController.text.isEmpty) {
-                    return S.of(context)?.thisFieldIsRequiered;
+                    return S.of(context).thisFieldIsRequiered;
                   }
                   if (confirmPasswordController.text !=
                       passwordController.text) {
-                    return S.of(context)!.confirmNewPassword;
+                    return S.of(context).confirmNewPassword;
                   }
                   return null;
                 },
@@ -129,12 +131,13 @@ class _SignUpFormState extends State<SignUpForm> {
             BlocBuilder<SignUpCubit, SignUpState>(
               bloc: signUpBloc,
               builder: (_, state) {
+                log(state.toString());
                 return state.maybeWhen(
                   loading: () {
                     return MainButton(
                       onTap: () {},
                       isLoading: true,
-                      label: S.of(context)!.signUp,
+                      label: S.of(context).signUp,
                       isOutlined: false,
                     );
                   },
@@ -154,7 +157,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       }
                       // Navigator.of(context).pushReplacementNamed(homeRoute);
                     },
-                    label: S.of(context)!.signUp,
+                    label: S.of(context).signUp,
                     isOutlined: !isEnabled,
                   ),
                   error: (_) {
@@ -174,13 +177,13 @@ class _SignUpFormState extends State<SignUpForm> {
                         }
                         // Navigator.of(context).pushReplacementNamed(homeRoute);
                       },
-                      label: S.of(context)!.signUp,
+                      label: S.of(context).signUp,
                       isOutlined: false,
                     );
                   },
                   orElse: () => MainButton(
                     onTap: () {},
-                    label: S.of(context)!.signUp,
+                    label: S.of(context).signUp,
                     isOutlined: true,
                   ),
                 );
@@ -195,15 +198,15 @@ class _SignUpFormState extends State<SignUpForm> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    S.of(context)!.alreadyHaveAccountMsg,
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                    S.of(context).alreadyHaveAccountMsg,
+                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
                           fontSize: 18,
                         ),
                   ),
                   const SizedBox(width: 5),
                   Text(
-                    S.of(context)!.login,
-                    style: Theme.of(context).textTheme.bodyText2!.copyWith(
+                    S.of(context).login,
+                    style: Theme.of(context).textTheme.bodyText2?.copyWith(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),

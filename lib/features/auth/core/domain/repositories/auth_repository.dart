@@ -13,5 +13,6 @@ abstract class AuthRepository {
   Future<Either<Failure, LoggedInUserEntity>> login(
       {required LoginParam params});
 
-  Either<Failure, Stream<User?>> checkAuthStatus();
+  Future<Either<Failure, Stream<User?>>> checkAuthStatus();
+
 }

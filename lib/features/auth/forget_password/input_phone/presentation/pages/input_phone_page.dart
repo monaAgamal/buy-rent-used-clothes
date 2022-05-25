@@ -13,7 +13,7 @@ class InputPhonePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar(
-        title: S.of(context)!.forgetPassword,
+        title: S.of(context).forgetPassword,
       ),
       body: const _Body(),
     );

@@ -26,7 +26,7 @@ class _InputPhoneFormState extends State<InputPhoneForm> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
-          S.of(context)!.phone,
+          S.of(context).phone,
         ),
         const SizedBox(height: 16),
         GenericTextField(
@@ -44,14 +44,14 @@ class _InputPhoneFormState extends State<InputPhoneForm> {
           builder: (_, state) {
             return state.maybeWhen(
               loading: () => MainButton(
-                label: S.of(context)!.sendOtp,
+                label: S.of(context).sendOtp,
                 isOutlined: true,
                 isLoading: true,
                 onTap: () {},
               ),
               enableSendPhoneButton: (isEnabled) => MainButton(
-                label: S.of(context)!.sendOtp,
-                isOutlined: !isEnabled,
+                label: S.of(context).sendOtp,
+                isOutlined: isEnabled,
                 onTap: isEnabled
                     ? () {
                         final args =
@@ -61,7 +61,7 @@ class _InputPhoneFormState extends State<InputPhoneForm> {
                     : () {},
               ),
               orElse: () => MainButton(
-                label: S.of(context)!.sendOtp,
+                label: S.of(context).sendOtp,
                 isOutlined: true,
                 onTap: () {},
               ),

@@ -81,7 +81,11 @@ class AuthRemoteRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Either<Failure, Stream<User?>> checkAuthStatus() {
-    throw UnimplementedError();
+  Future<Either<Failure, Stream<User?>>> checkAuthStatus() async {
+    try {
+      return Right(authRemoteDataSource.checkAuthStatus());
+    } on ApplicationException catch (e) {
+      return Left(firebaseExceptionToFailureDecoder(e));
+    }
   }
 }

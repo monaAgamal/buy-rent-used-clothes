@@ -38,7 +38,7 @@ class _LoginFormState extends State<LoginForm> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Text(
-            S.of(context)!.welcomeBack,
+            S.of(context).welcomeBack,
             style: Theme.of(context).textTheme.headline5?.copyWith(
                   color: Theme.of(context).colorScheme.secondary,
                   fontWeight: FontWeight.bold,
@@ -46,13 +46,13 @@ class _LoginFormState extends State<LoginForm> {
           ),
           const SizedBox(height: 12),
           Text(
-            S.of(context)!.logInToYourAccount,
-            style: Theme.of(context).textTheme.bodyText2!.copyWith(),
+            S.of(context).logInToYourAccount,
+            style: Theme.of(context).textTheme.bodyText2?.copyWith(),
           ),
           const SizedBox(height: 16),
           GenericTextField(
             controller: emailController,
-            hint: S.of(context)!.email,
+            hint: S.of(context).email,
             keyboardType: TextInputType.phone,
             onChanged: (phone) {
               loginBloc.enableLoginButton(
@@ -64,7 +64,7 @@ class _LoginFormState extends State<LoginForm> {
           const SizedBox(height: 16),
           GenericTextField(
             controller: passwordController,
-            hint: S.of(context)!.password,
+            hint: S.of(context).password,
             keyboardType: TextInputType.text,
             isObsecure: true,
             onChanged: (password) {
@@ -81,7 +81,7 @@ class _LoginFormState extends State<LoginForm> {
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                S.of(context)!.forgetPassword + " ?",
+                S.of(context).forgetPassword + " ?",
                 style: const TextStyle(fontSize: 16),
               ),
             ),
@@ -92,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
             builder: (context, state) {
               return state.maybeWhen(
                 loading: () => MainButton(
-                  label: S.of(context)!.login,
+                  label: S.of(context).login,
                   isOutlined: true,
                   onTap: () {},
                   isLoading: true,
@@ -100,8 +100,13 @@ class _LoginFormState extends State<LoginForm> {
                 enableLoginButton: (isEnabled, _) {
                   log(isEnabled.toString());
                   return MainButton(
-                    onTap: () {},
-                    label: S.of(context)!.login,
+                    onTap: () {
+                      loginBloc.login(
+                        email: emailController.text,
+                        password: passwordController.text,
+                      );
+                    },
+                    label: S.of(context).login,
                     isOutlined: !isEnabled,
                   );
                 },
@@ -109,7 +114,7 @@ class _LoginFormState extends State<LoginForm> {
                   onTap: () {
                     Navigator.of(context).pushReplacementNamed(homeRoute);
                   },
-                  label: S.of(context)!.login,
+                  label: S.of(context).login,
                   isOutlined: passwordController.text.isEmpty &&
                       emailController.text.isEmpty,
                 ),
@@ -125,12 +130,12 @@ class _LoginFormState extends State<LoginForm> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  S.of(context)!.dontHaveAccountMsg,
+                  S.of(context).dontHaveAccountMsg,
                   style: const TextStyle(fontSize: 18),
                 ),
                 const SizedBox(width: 4),
                 Text(
-                  S.of(context)!.signUp,
+                  S.of(context).signUp,
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.bold),
                 ),

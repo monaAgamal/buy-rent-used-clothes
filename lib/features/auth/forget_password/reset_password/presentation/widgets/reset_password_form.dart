@@ -28,10 +28,10 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(S.of(context)!.newPassword),
+          Text(S.of(context) .newPassword),
           const SizedBox(height: 16),
           GenericTextField(
-            hint: S.of(context)!.newPassword,
+            hint: S.of(context) .newPassword,
             isObsecure: true,
             onChanged: (newPassword) {
               _cubit.enableConfirmPasswordButton(
@@ -42,10 +42,10 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
             controller: _passwordController,
           ),
           const SizedBox(height: 16),
-          Text(S.of(context)!.confirmNewPassword),
+          Text(S.of(context) .confirmNewPassword),
           const SizedBox(height: 16),
           GenericTextField(
-            hint: S.of(context)!.confirmPassword,
+            hint: S.of(context) .confirmPassword,
             isObsecure: true,
             onChanged: (newPassword) {
               _cubit.enableConfirmPasswordButton(
@@ -61,8 +61,8 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
               return state.maybeWhen(
                 isEnabled: (isEnabled) {
                   return MainButton(
-                    label: S.of(context)!.confirmPassword,
-                    isOutlined: !isEnabled,
+                    label: S.of(context) .confirmPassword,
+                    isOutlined:  isEnabled,
                     onTap: isEnabled
                         ? () {
                             Navigator.of(context).pushNamed(homeRoute);
@@ -71,7 +71,7 @@ class _ResetPasswordFormState extends State<ResetPasswordForm> {
                   );
                 },
                 orElse: () => MainButton(
-                  label: S.of(context)!.confirmPassword,
+                  label: S.of(context) .confirmPassword,
                   isOutlined: true,
                   onTap: () {},
                 ),

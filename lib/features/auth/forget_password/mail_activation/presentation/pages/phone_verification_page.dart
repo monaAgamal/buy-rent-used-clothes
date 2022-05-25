@@ -24,7 +24,7 @@ class _Body extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          S.of(context)!.verifyAccount,
+          S.of(context) .verifyAccount,
         ),
         elevation: 0,
         centerTitle: true,

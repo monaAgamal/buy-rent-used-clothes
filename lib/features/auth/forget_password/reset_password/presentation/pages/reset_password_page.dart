@@ -14,7 +14,7 @@ class ResetPasswordPage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          S.of(context)!.resetPassword,
+          S.of(context) .resetPassword,
         ),
       ),
       body:   Padding(

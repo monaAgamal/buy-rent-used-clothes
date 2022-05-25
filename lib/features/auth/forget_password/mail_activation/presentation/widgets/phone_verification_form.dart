@@ -36,7 +36,7 @@ class PhoneVerificationForm extends StatelessWidget {
         children: [
           const SizedBox(height: 24),
           Text(
-            S.of(context)!.codeSentToYourEmail,
+            S.of(context) .codeSentToYourEmail,
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 8),
@@ -52,7 +52,7 @@ class PhoneVerificationForm extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 16),
-          Text(S.of(context)!.checkMailToVerify),
+          Text(S.of(context) .checkMailToVerify),
           const SizedBox(height: 36),
           // Padding(
           //   padding: const EdgeInsets.all(12),
@@ -86,8 +86,8 @@ class PhoneVerificationForm extends StatelessWidget {
               return state.maybeWhen(
                 isEnabled: (isEnabled) {
                   return MainButton(
-                    label: S.of(context)!.checkCode,
-                    isOutlined: !isEnabled,
+                    label: S.of(context) .checkCode,
+                    isOutlined:  isEnabled,
                     onTap: () {
                       Navigator.of(context).pushNamed(resetPasswordROute);
                     },
@@ -95,13 +95,13 @@ class PhoneVerificationForm extends StatelessWidget {
                 },
                 loading: () {
                   return MainButton(
-                    label: S.of(context)!.resendEmail,
+                    label: S.of(context) .resendEmail,
                     isOutlined: false,
                     onTap: () {},
                   );
                 },
                 orElse: () => MainButton(
-                  label: S.of(context)!.resendEmail,
+                  label: S.of(context) .resendEmail,
                   isOutlined: false,
                   onTap: () {
                     bloc.sendEmailVerification();

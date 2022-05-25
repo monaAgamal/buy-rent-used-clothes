@@ -12,15 +12,16 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   AuthRemoteDataSourceImpl(this.authService);
 
   @override
-  Future<UserModel> login(
+  Future<UserModel>? login(
       {required String email, required String passWord}) async {
     try {
       final userModel =
           await authService.login(email: email, password: passWord);
+      return userModel!;
     } on FirebaseAuthException catch (e) {
       firebaseAuthExceptionDecoder(firebaseAuthException: e);
+       
     }
-    throw GenericException("Some thing went wrong");
   }
 
   @override

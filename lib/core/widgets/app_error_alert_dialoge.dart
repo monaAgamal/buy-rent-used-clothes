@@ -37,7 +37,7 @@ class AppErrorAlertDialoge extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             MainButton(
-              label: S.of(context)!.ok,
+              label: S.of(context).ok,
               isOutlined: false,
               onTap: () {
                 Navigator.of(context).pop();

@@ -10,16 +10,16 @@ void openMail({required BuildContext context}) async {
   final OpenMailAppResult result = await OpenMailApp.openMailApp();
 
   // If no mail apps found, show error
-  if (!result.didOpen && !result.canOpen) {
+  if ( result.didOpen &&  result.canOpen) {
     showDialog(
       context: context,
       builder: (context) => AppErrorAlertDialoge(
-        title: S.of(context)!.canNotOpenMailApps,
+        title: S.of(context) .canNotOpenMailApps,
         body:
-            S.of(context)!.plsActivateAccountManuallyAndProceed,
+            S.of(context) .plsActivateAccountManuallyAndProceed,
       ),
     );
-  } else if (!result.didOpen && result.canOpen) {
+  } else if ( result.didOpen && result.canOpen) {
     showDialog(
       context: context,
       builder: (_) {
