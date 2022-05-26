@@ -19,8 +19,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
           await authService.login(email: email, password: passWord);
       return userModel!;
     } on FirebaseAuthException catch (e) {
-      firebaseAuthExceptionDecoder(firebaseAuthException: e);
-       
+      throw firebaseAuthExceptionDecoder(firebaseAuthException: e);
     }
   }
 

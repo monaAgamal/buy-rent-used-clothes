@@ -9,7 +9,7 @@ class GenericException extends ApplicationException {
   GenericException(this.message);
 }
 
-void firebaseAuthExceptionDecoder(
+firebaseAuthExceptionDecoder(
     {required FirebaseAuthException firebaseAuthException}) {
   if (firebaseAuthException.code == "email-already-in-use") {
     throw const ClientException.emailAlreadyInUse();

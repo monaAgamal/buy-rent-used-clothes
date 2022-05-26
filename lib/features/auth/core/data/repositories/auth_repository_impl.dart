@@ -55,7 +55,7 @@ class AuthRemoteRepositoryImpl implements AuthRepository {
     try {
       final userModel = await authRemoteDataSource.login(
           email: params.email, passWord: params.password);
-      await authLocalDataSource.persistAuth(userModel: userModel);
+      await authLocalDataSource.persistAuth(userModel: userModel!);
       if (!userModel.isVerified) {
         await authRemoteDataSource.sendVerificationEmail();
       }
